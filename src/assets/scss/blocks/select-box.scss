@@ -1,0 +1,34 @@
+.select-box{
+
+}
+.product{
+  & .select-box{
+    
+  }
+  & .select-box select{
+    position: relative;
+    display: block;
+    padding: .8rem 3rem .8rem 0.1rem;
+    min-height: auto;
+    width: auto;
+    min-width: 15rem;
+    height: 100%;
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+    color: #222;
+    border-color: #ccc;
+    font-size: 1.3rem;
+    background-color: transparent;
+    line-height: 1.5;
+    outline: none;
+  }
+  & .select-box select::before{
+    position: absolute;
+    display: block;
+    content: "\f078";
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 700;
+  }
+}

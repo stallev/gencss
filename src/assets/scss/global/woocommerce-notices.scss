@@ -1,0 +1,58 @@
+.woocommerce-notice {
+  padding: 20px 0;  
+}
+
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info {
+  padding: 15px 0;
+  font-size: 1.6rem;
+  color: #fff;
+  line-height: 1.8rem;
+
+  &::before {
+    color: #fff;
+  }
+}
+
+.woocommerce-info {
+  &--custom-styled {
+    padding-left: 50px;
+  }
+}
+.woocommerce-message {
+  background-color: $yellow;
+
+  a {
+    color: $red;
+    text-decoration: underline;
+  }
+}
+
+.woocommerce-error {
+  background-color: #b81c23;
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+.woocommerce-notice--success,
+.woocommerce-thankyou-order-received {
+  background-color: green;
+  margin-bottom: 10px;
+}
+
+.woocommerce-info {
+  background-color: #1e85be;
+
+  .showcoupon {
+    text-decoration: underline;
+    font-weight: 700;
+  }
+}
+
+.coupon__submit-btn {
+  @include submitBtnStyles();
+}

@@ -1,0 +1,614 @@
+.checkout {
+  width: 100%;
+  &__goods-total{
+    padding-top: 40px;
+  }
+  &__item{
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    &--subtotal{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 25px 0;
+    text-align: center;
+  }
+
+  & h2{
+    padding: 15px 0;
+    text-align: left;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    color: #222;
+    text-transform: uppercase;
+  }
+  &__item h2{
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    color: #222;
+    text-transform: uppercase;
+  }
+  &__item h3{
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    color: #222;
+  }
+  &__item-shipping-list{
+    margin-top: 10px;
+    & li{
+      margin-bottom: 10px;
+    }
+  }
+  &__item-radio-label,
+  &__item-subtotal-value,
+  &__item-country{
+    @extend %checkoutSmalBlackText;
+  }
+
+  //стили radio при checked
+  &__item--goods-shipping{
+    padding-bottom: 10px;
+  }
+  &__item-shipping-list input{
+    display: none;
+  }
+  &__item-shipping-list input + label{
+    &::before{
+      position: absolute;
+      display: block;
+      left: 6px;
+      top: 50%;
+      transform: translate(0, -50%);
+      content: '\f111';
+      color: #222;
+      font-size: 1.5rem;
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 400;
+    }
+  }
+  &__item-shipping-list input:checked + label{
+    &::before{
+      position: absolute;
+      display: block;
+      left: 6px;
+      top: 50%;
+      transform: translate(0, -50%);
+      content: '\f192';
+      color: #222;
+      font-size: 1.5rem;
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 400;
+    }
+  }
+  &__item-radio-label{
+    position: relative;
+    display: block;
+    width: fit-content;
+    padding-left: 30px;
+  }
+  //конец стилям radio
+
+
+  &__input-text-field,
+  &__item-select {
+    @include ordinaryInputField();
+  }
+
+  &__item-country-option{
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #664;
+  }
+  &__item-country-shipping,
+  &__item--pt0{
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  &__item-country-shipping select{
+    margin-bottom: 20px;
+  }
+  &__item--submit div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__item--submit .checkout__item-value{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+  }
+  &__item-submit-btn{
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-weight: 700;
+    font-size: 1.4rem;
+    background-color: #222;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__btn-sec{
+    @include checkoutBtn();
+  }
+  //стили блока с контактной информацией
+  &__item--contacts-info{
+    padding-top: 0;
+    border-bottom: none;
+  }
+  &__item--contacts-info h2{
+    margin-bottom: 15px;
+  }
+  &__item-field{
+    margin-bottom: 15px;
+  }
+  &__input-text-label,
+  .woocommerce-form-row label {
+    display: block;
+    padding-left: .2rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #664;
+  }
+  &__item-check-fields-wrap{
+    margin-bottom: 30px;
+  }
+  &__item-additional-info h2{
+    margin-bottom: 15px;
+    border-bottom: 0;
+  }
+  &__item-textarea-descr{
+    display: block;
+    padding-left: .2rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+  &__item-textarea-field{
+    display: block;
+    width: 100%;
+    min-height: 4rem;
+    padding: .85rem 2rem;
+    border: 1px solid #e3e3e3;
+    line-height: 1.5;
+    outline: none;
+  }
+  //стили checkbox при checked
+  &__item-additional-info{
+    padding-top: 0;
+    border-bottom: none;
+  }
+  &__item-chk-field{
+    margin-bottom: 15px;
+  }
+  &__item-chk-field:last-of-type{
+    margin-bottom: 0;
+  }
+  &__item-chk-field input{
+    display: none;
+  }
+  &__item-chk-field input + label{
+    &::before{
+      position: absolute;
+      display: block;
+      left: 6px;
+      top: 50%;
+      transform: translate(0, -50%);
+      content: '\f0c8';
+      color: #222;
+      font-size: 1.7rem;
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 400;
+    }
+  }
+  &__item-chk-field input:checked + label{
+    &::before{
+      position: absolute;
+      display: block;
+      left: 6px;
+      top: 50%;
+      transform: translate(0, -50%);
+      content: '\f14a';
+      color: #222;
+      font-size: 1.7rem;
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 400;
+    }
+  }
+  &__item-checkbox-label,
+  .woocommerce-form-row label {
+    position: relative;
+    display: block;
+    width: fit-content;
+    padding-left: 5px;
+    font-size: 1.4rem;
+    //line-height: 2.58;
+  }
+  //конец стилям checkbox
+
+  //стили checkout.html левый столбец
+  &__order-info{
+    padding: 20px 15px;
+    border: 1px solid #ccc;
+    &--finished{
+      padding-bottom: 0;
+      & .checkout__item:last-of-type{
+        border-bottom: none;
+      }
+    }
+  }
+  &__item--goods h3{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  &__item--goods{
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  &__item-goods-total-title{
+    padding-bottom: 20px;
+  }
+  &__item-goods-row-list{
+    padding-top: 20px;
+  }
+  &__item-goods-row{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+    &--bb0{
+      border-bottom: none;
+      padding: 0;
+    }
+  }
+  &__item-goods-row--bb0 .checkout__item-goods-price{
+    line-height: 1;
+  }
+  &{
+    display: inline-block;
+  }
+  &__item-goods-name,
+  &__item-goods-count{
+    @extend %checkoutSmalBlackText;
+    line-height: 1.5;
+  }
+  &__item-goods-row i{
+    font-size: 1rem;
+    color: #222;
+    line-height: 1.5;
+    padding-bottom: 10px;
+  }
+  &__item-goods-price{
+    text-align: right;
+    font-size: 1.4rem;
+    color: #222;
+    line-height: 1.5;
+  }
+  &__item-inner-total-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & span{
+      font-size: 2rem;
+      font-weight: 700;
+      color: #222;
+      text-align: right;
+    }
+  }
+
+  //методы оплаты
+  &__item--payment-methods{
+    padding-top: 40px;
+    & h3{
+      margin-bottom: 20px;
+    }
+  }
+  &__item-payments-item{
+    margin-bottom: 15px;
+  }
+  &__item-payments-link{
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    color: #222;
+    @include colorOnHover;
+  }
+  
+  &__item-nav{
+    display: none;
+  }
+  &__item--submit>p{
+    padding: 5px 0 15px;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  //стили для третьей страницы оформления заказа
+  &__order-message{
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 3px solid #ccc;
+    & i{
+      color: green;
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+    & h2{
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #222;
+      text-align: center;
+    }
+  }
+  &__order-results{
+    margin-bottom: 20px;
+  }
+  &__order-results-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__order-results-item{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 15px 45px;
+  }
+  &__order-results-item-name{
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #664;
+    font-weight: 700;
+  }
+  &__order-results-item-value{
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #222;
+  }
+  &__item--last-table{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item-last-table-option{
+    display: block;
+    font-size: 1.4rem;
+    color: #222;
+    font-weight: 700;
+  }
+  &__item--billing-address{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  &__item-simple-text-item{
+    font-size: 1.4rem;
+    color: #664;
+    line-height: 2.15;
+  }
+  &__btn-sec--to-cart-html{
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+  }
+  &__order-info{
+    margin-bottom: 15px;
+  }
+  &__item--pt0{
+    margin-bottom: 15px;
+    padding-top: 0;
+  }
+}
+//стили аккордеона методов оплаты
+.checkout__item-payments-link.accordeon__item-nav-link{
+  display: block;
+  position: relative;
+  &::before{
+    position: absolute;
+    display: block;
+    left: 6px;
+    top: 50%;
+    transform: translate(0, -50%);
+    content: '\f111';
+    color: #222;
+    font-size: 1.5rem;
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 400;
+  }
+}
+.checkout__item-payments-link.accordeon__item-nav-link--active{
+  &::before{
+    position: absolute;
+    display: block;
+    left: 6px;
+    top: 50%;
+    transform: translate(0, -50%);
+    content: '\f192';
+    color: #222;
+    font-size: 1.5rem;
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 400;
+  }
+}
+.checkout__item-payments-content{
+  padding-left: 30px;
+  font-size: 1.3rem;
+  color: #222;
+  line-height: 1.7;
+}
+
+.checkout {
+  p {
+    @include paragraphStyle();
+  }
+
+  h1, h2, h3 {
+    padding: 15px 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  &__goods-total-title {
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+
+  &__cart-totals {
+    padding-bottom: 30px;
+
+    h2, h3 {
+      font-family: Arial, Helvetica, sans-serif;
+      margin-bottom: 20px;
+    }
+
+    th {
+      @include checkoutThStyle();
+    }
+
+    td {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__coupon-block {
+    border: none !important;
+  }
+
+  &__info-paragraph {
+    @include paragraphStyle();
+
+    &--coupon {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-subtitle {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    color: #222;
+  }
+
+
+  &__order-review {
+    th {
+      @include checkoutThStyle();
+    }
+
+    td {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__terms {
+    @include paragraphStyle();
+    margin-bottom: 20px;
+  }
+
+  #payment {
+    background-color: #fff;
+  }
+
+  &__payment-submit-btn {
+    display: block;
+    width: fit-content;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    background-color: #222;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__woocommerce-order {
+    @include paragraphStyle();
+  }
+
+  &__notice {
+    margin-bottom: 20px;
+
+    p {
+      font-size: 1.6rem;
+      color: #fff;
+      line-height: 1.8rem;
+    }
+
+    &--success {
+      background-color: green;
+    }
+
+    &--error {
+      background-color: #b81c23;
+    }
+  }
+
+  ul.checkout__thankyou-order-details {
+    margin: 2em;
+
+    li {
+      margin-bottom: 1em;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: -.01em;
+      color: #222;
+      line-height: 1.4;
+    }
+  }
+
+  table.shop_table th {
+    @include checkoutThStyle();
+  }
+
+  table.shop_table td {
+    font-size: 1.4rem;
+  }
+
+  &__customer-details {
+    address {
+      font-size: 1.4rem;
+      line-height: 1.4;
+    }
+  }
+
+  @media only screen and (min-width: 767px) {}
+}
+
+.woocommerce-input-wrapper select {
+  option {
+    @include paragraphStyle();
+  }
+
+  & .select2-container .select2-selection.select2-selection--single {
+    @include paragraphStyle();
+  }
+} 
+
+@media only screen and (min-width: 991px){
+  .checkout{
+    &__goods-total{
+      padding-top: 0;
+    }
+  }
+}

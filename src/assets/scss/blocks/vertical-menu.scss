@@ -1,0 +1,97 @@
+.menu {
+  
+}
+
+.menu__card-product:nth-child(even){
+  margin: 0 15px;
+}
+
+@media (min-width: $tablet-width) {
+}
+
+@media (min-width: $desctop-width) {
+}
+
+.vertical-menu {
+  margin-bottom: 20px;
+
+  li.menu-item-has-children {
+    position: relative;
+  }
+
+  .current-menu-item>a {
+    color: $red;
+  }
+
+  a {
+    display: block;
+    padding: 10px 5px 10px;
+    border-bottom: 1px solid $brd-c;
+    color: $content-color;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: none;
+    transition: color .3s ease-in;
+    
+    &:hover{
+      color: $red;
+    }
+  }
+  &__sublist-icon{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 30px;
+    padding-right: 12px;
+    height: 30px;
+    cursor: pointer;
+
+    &::after{
+      position: absolute;
+      display: block;
+      content: '';
+      top: 50%;
+      right: 50%;
+      width: 8px;
+      height: 1px;
+      transform: rotate(45deg);
+      background-color: $content-color;
+    }
+
+    &::before{
+      position: absolute;
+      display: block;
+      content: '';
+      top: 50%;
+      right: calc(50% - 5px);
+      width: 8px;
+      height: 1px;
+      transform: rotate(-45deg);
+      background-color: $content-color;
+    }
+  }
+
+  .open-state {
+    transform: rotate(180deg);
+  }
+
+  &__sub1-list, .sub-menu {
+    top: 50px;
+    padding-left: 15px;
+    background-color: transparent;
+    width: 100%;
+    max-width: 240px;
+    &::before{
+      position: absolute;
+      display: block;
+      content: '';
+      width: 0;
+      height: 0;
+      top: -13px;
+      left: 22px;
+      border-style: solid;
+      border-width: 0 10px 12px 10px;
+      border-color: transparent transparent #ffffff transparent;
+    }
+  }
+}

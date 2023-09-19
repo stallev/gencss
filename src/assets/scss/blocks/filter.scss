@@ -1,0 +1,290 @@
+.filter{
+  padding: 0;
+  &__title{
+    padding: 14px 20px 14px 2px;
+    border-bottom: 1px solid $brd-c;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $content-color;
+    cursor: pointer;
+  }
+  &__option-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none;
+    &:last-of-type{
+      border-bottom: none;
+    }
+  }
+  &__options-list{
+    transition: height .4s ease-in-out;
+  }
+  &__option-link{
+    display: inline-block;
+    padding: 10px 15px 10px 10px;
+    width: 91%;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $content-color;
+    transition: color .4s ease-in;
+    &:hover{
+      color: $red;
+    }
+    & input{
+      display: none;
+    }
+  }
+  &__option-link-name{
+    display: inline-block;
+    margin-left: 10px;
+  }
+  &__options-sub1list{
+    margin-left: 15px;
+    margin-bottom: 5px;
+    padding-right: 10px;
+    border-left: 1px solid rgb(238, 238, 238);
+    transition: all .4s ease-in;
+    animation-name: appearSublist-animation;
+    animation-duration: 7s;
+    & li{
+      padding-left: 10px;
+    }
+  }
+  &__option-item--sublist{
+    border-bottom: none;
+  }
+  &--apply-btn{
+    padding: 20px 0;
+  }
+  &__apply-button{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 4px 15px 4px 15px;
+    background-color: $content-color;
+    color: $white;
+    border-radius: 20px;
+    transition: all .4s ease-in;
+    font-size: 1.4rem;
+    cursor: pointer;
+    &:hover{
+      background-color: $red;
+      color: #fff;
+    }
+  }
+}
+@keyframes appearSublist-animation {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.filter .sublist-title{
+  position: relative;
+}
+.filter {
+  transition: color .4s ease-in;
+  &:hover{
+    color: #26b;
+  }
+}
+.filter .filter__title-open-list{
+  position: absolute;
+  display: block;
+  top: 90%;
+  right: 31px;
+  width: 1px;
+  height: 1px;
+  &::before{
+    position: absolute;
+    top: -20px;
+    right: -23px;
+    width: 10px;
+    height: 2px;
+    content: '';
+    display: block;
+    background-color: #222;
+    font-size: 3.1rem;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  &::after{
+    position: absolute;
+    top: -20px;
+    right: -23px;
+    width: 10px;
+    height: 2px;
+    content: '';
+    display: block;
+    background-color: #222;
+    font-size: 3.1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: transform .1s ease-in;
+    transform: rotate(0deg);
+  }
+}
+
+.filter .filter__title-open-list.open-state{
+  &::after{
+    transform: rotate(90deg);
+  }
+}
+.filter__option-item .filter__option-link .hidden-items-control{
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 15px;
+  width: 1px;
+  height: 1px;
+  &::before{
+    position: absolute;
+    top: -8px;
+    right: -22px;
+    content: '\f107';
+    display: block;
+    color: #222;
+    font-size: 1.5rem;
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 400;
+    cursor: pointer;
+  }
+}
+.filter__option-item .filter__option-link .hidden-items-control.open-state{
+  &::before{
+    content: '\f106';
+    right: -22px;
+  }
+}
+
+//стили для чекбоксов в фильтре
+.filter{
+  &__options-list--chkbox a,
+  &__options-list--chkbox label{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+  }
+  &__option-link-chk-count{
+    font-size: 1.4rem;
+    color: #cdcdcd;
+  }
+  &__option-link-chk-name{
+    position: relative;
+    display: block;
+    padding-left: 25px;
+    cursor: pointer;
+    &::before{
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 2px;
+      content: '';
+      width: 15px;
+      height: 15px;
+      border: 1px solid #cdcdcd;
+      border-radius: 1px;
+    }
+  }
+}
+.filter__option-link.checked-option .filter__option-link-chk-name::before{
+  top: 0;
+  right: -23px;
+  content: '\f14a';
+  border: none;
+  width: fit-content;
+  color: $red;
+  font-size: 2rem;
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 400;
+  cursor: pointer;
+}
+
+//стили для фильтра по цене
+.filter__price-filter{
+  margin: 15px 7px;
+}
+.drag-filter-control{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  &-name{
+    display: inline-block;
+    margin-right: 10px;
+    padding: 4px 20px;
+    background-color: $content-color;
+    text-transform: capitalize;
+    color: $white;
+    border-radius: 20px;
+    transition: all .4s ease-in;
+    font-size: 1.4rem;
+    cursor: pointer;
+    &:hover{
+      background-color: $red;
+      color: #fff;
+    }
+  }
+  &-range{
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #222;
+  }
+}
+.catalog-sidebar__filters-group.filter{
+  margin-bottom: 10px;
+}
+.drag-filter .filter__options-list{
+  margin-top: 25px;
+}
+.drag-filter{
+  padding: 0 3px;
+}
+.noUi-target{
+  background: #ccc;
+  border: none;
+  border-radius: 100px;
+  box-shadow: none;
+  height: 2px;
+}
+.noUi-connect{
+  background: $red;
+  height: 3px;
+}
+.noUi-handle.noUi-handle-lower{
+  right: 10px;
+}
+.noUi-handle::after,
+.noUi-handle::before{
+  display: none;
+}
+.noUi-base, .noUi-connects{
+  height: 4px;
+  width: 100%;
+  transform: translateX(0px);
+}
+.noUi-horizontal .noUi-handle{
+  top: -8px;
+  box-shadow: none;
+  outline: none;
+  width: 1.8rem;
+  height: 1.8rem;
+  box-sizing: border-box;
+  border: 4px solid $red;
+  background: $white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.noUi-handle-lower{
+  left: 8px;
+}
+
+
+@media only screen and (min-width: 991px){
+  .filter__option-item .filter__option-link .hidden-items-control{
+    right: 30px;
+  }
+}

@@ -1,0 +1,42 @@
+.main {
+  flex-grow: 2;
+  background-color: $white;
+
+  &__content-wrap{
+    overflow: hidden;
+
+    @media only screen and (min-width: 991px){
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 15px;
+    }
+  }
+
+  &__content-sidebar-wrap {
+
+    @media only screen and (min-width: 991px){
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 30px;
+    }
+
+    @media only screen and (min-width: 1199px){
+      grid-template-columns: 1fr 4fr;
+    }
+  }
+}
+@media only screen and (min-width: 575px){
+  .main{
+  }
+}
+@media only screen and (min-width: 767px){
+  .main{
+  }
+}
+@media only screen and (min-width: 991px){
+  .main{
+    &__content{
+      overflow-x: hidden;
+    }
+  }
+}

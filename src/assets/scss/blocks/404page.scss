@@ -1,0 +1,41 @@
+.page-not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  min-height: 35vh;
+  margin: 0 auto;
+
+  &__title {
+    display: inline-block;
+    width: fit-content;
+    text-align: center;
+    font-size: 30px;
+
+    @media only screen and (min-width: 767px) {
+      font-size: 40px;
+    }
+  }
+
+  &__to-home-link {
+    display: block;
+    margin-top: 30px;
+    font-size: 25px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: $shadows-notification;
+    background-color: $bright-color;
+    transition: all .4s ease-in;
+
+    &:hover {
+      background-color: $bright-color-hover;
+    }
+
+    @media only screen and (min-width: 767px) {
+      font-size: 30px;
+      padding: 25px 35px;
+      margin-top: 40px;
+    }
+  }
+}

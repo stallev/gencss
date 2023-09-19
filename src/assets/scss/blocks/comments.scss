@@ -1,0 +1,99 @@
+.commentlist{  
+  &__profile-link{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  img {
+    display: inline-block;
+    border-radius: 50%;
+  }
+  .comment-text{
+    margin-left: 30px;
+    flex-grow: 2;
+  }
+
+  .woocommerce-review__author {
+    margin-bottom: .4rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #222;
+    @include colorOnHover;
+  }
+
+  .woocommerce-review__published-date {
+    display: block;
+    font-size: 1.3rem;
+  }
+  
+  .description {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+  }
+}
+
+//блок с комментариями
+.commentlist {
+  & .author__comments-title{
+    margin-top: 30px;
+    padding: 15px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #222;
+  }
+  & .author__wrap:first-of-type{
+    border-top: none;
+  }
+
+  .comment_container {
+    display: flex;
+    align-items: flex-start;
+    padding: 3.5rem 2rem 4.3rem;
+    border-top: 1px solid rgb(153, 153, 153);
+  }
+
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 5px;
+  }
+}
+.author__reviews{
+  border-bottom: 1px solid #ccc;
+  & .author__wrap:first-of-type{
+    border-top: none;
+  }
+  & .author__wrap{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid rgb(153, 153, 153);
+  }
+  & .author__details-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  & .author__descr{
+    margin: 0;
+  }
+  & .author__rating{
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 767px){
+  .commentlist {
+    .meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0;
+    }
+  }
+}

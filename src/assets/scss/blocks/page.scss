@@ -1,0 +1,83 @@
+.page {
+  padding: 50px 0 30px;
+
+  &__content {
+    p, ol li {
+      @include paragraphStyle();
+
+      &:not(:first-of-type) {
+        margin-top: 10px;
+      }
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    &-faq-wrap {
+      margin-bottom: 20px;
+    }
+
+    details {
+      border-bottom: 1px solid #e7e7e7;
+
+      summary {
+        position: relative;
+        padding: 8px 8px 8px 32px;
+        border-radius: 4px;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.5;
+        cursor: pointer;
+        list-style: none;
+
+        &::after {
+          position: absolute;
+          left: 6px;
+          top: 8px;
+          border-radius: 2px;
+          content: "+";
+          color: inherit;
+          font-size: inherit;
+          font-weight: $font-weight-bold;
+          text-align: center;
+          width: 20px;
+        }
+      }
+
+      &[open] {
+        box-shadow: $shadows-blog;
+
+        &:not(:last-of-type) {
+          margin-bottom: 12px;
+        }
+
+        &:not(:first-of-type) {
+          margin-top: 12px;
+        }
+
+        & summary::after {
+          content: "-";
+        }
+      }
+
+      p {
+        padding: 8px 16px;
+        margin-top: 0;
+        line-height: 2;
+      }
+    }
+
+    .wp-block-heading {
+      margin: 20px 0;
+    }
+
+    h2.wp-block-heading {
+      @include h2Styles();
+    }
+    
+    h3.wp-block-heading {
+      @include h3Styles();
+    }
+  }
+}

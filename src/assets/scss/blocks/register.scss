@@ -1,0 +1,13 @@
+.register {
+  margin-bottom: 30px;
+
+  .woocommerce-form-row {
+    display: grid;
+    grid-template-columns: minmax(auto, 250px);
+    margin-bottom: 15px;
+  }
+
+  .woocommerce-privacy-policy-text {
+    margin-bottom: 15px;
+  }
+}

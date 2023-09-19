@@ -1,0 +1,99 @@
+//стили управляющих стрелок слайдера товаров
+.slider-button__prev,
+.slider-button__next{
+  position: absolute;
+  display: inline-block;
+  padding: 7px 14px;
+  border: 2px solid $red;
+  top: 145px;
+  font-size: 2rem;
+  color: $red;
+  // transition: all .3s ease;
+  // &:hover{
+  //   border-color: $red;
+  //   color: $red;
+  // }
+
+  &--round {
+    border-radius: 50%;
+  }
+}
+.slider-button__prev{
+  left: 0px;
+  z-index: 9;
+}
+.slider-button__next{
+  right: 0px;
+}
+
+.round-btn {
+  &__prev,
+  &__next {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    transition: all .4s ease-in-out;
+    top: calc(50% - 15px);
+    transform: translate(0, -50%);
+    
+    &::before{
+      position: absolute;
+      display: block;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      text-align: center;
+      font-family: "Font Awesome 5 Pro";
+      font-size: 1.9rem;
+      line-height: 23px;
+      font-weight: 400;
+      color: #fff;
+      transition: all .4s ease-in-out;
+      background-color: #26b;      
+    }
+    &:hover::before {
+      background-color: $yellow;
+    }
+  }
+
+  &__prev{
+    left: 10%;
+    z-index: 25;
+    &::before{
+      content: '\f104';
+    }
+
+    @media only screen and (min-width: 991px) {
+      right: 20%;
+    }
+  }
+
+  &__next{
+    right: 12%;
+    &::before{
+      content: '\f105';
+    }
+
+    @media only screen and (min-width: 991px) {
+      right: 10%;
+    }
+  }
+}
+
+.simple-angle--prev,
+.simple-angle--next {
+  position: absolute;
+  top: -64px;
+  font-size: 1.7rem;
+  color: #222;
+}
+
+.simple-angle--prev {
+  right: 40px;
+}
+
+.simple-angle--next {
+  right: 10px;
+}

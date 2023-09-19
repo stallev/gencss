@@ -1,0 +1,56 @@
+.mail-us{
+  &__inner-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media only screen and (min-width: $tablet-width) {
+      flex-direction: row;
+    }
+  }
+
+  &__info{
+    margin-bottom: 20px;
+
+    @media only screen and (min-width: $tablet-width) {
+      width: 33%;
+      max-width: 250px;
+    }
+  }
+  &__title{
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+    text-transform: uppercase;
+    color: #222;
+  }
+  &__descr{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+  }
+  &__contacts-item{
+    margin-top: 20px;
+  }
+  &__contacts-item-title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.4rem;
+    text-transform: uppercase;
+    color: #222;
+  }
+  &__contacts-item-content{
+    display: block;
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+    cursor: pointer;
+    transition: all .3s ease;
+    &:hover{
+      color: $red;
+    }
+  }
+  &__form-wrap{
+    //padding: 20px 0 50px;
+  }
+}

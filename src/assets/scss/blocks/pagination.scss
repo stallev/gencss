@@ -1,0 +1,131 @@
+.pagination{
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  &__display{
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #ccc;
+    & span{
+      color: #222;
+    }
+  }
+  &__list{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+  }
+  &__item{
+    display: block;
+    margin-right: 7px;
+  }
+  &__item-link{
+    display: block;
+    padding: 3px 7px;
+    display: inline-block;
+    border: 1px solid transparent;
+    color: #222;
+    font-size: 1.4rem;
+    @include colorOnHover;
+    &:hover{
+      border-color: $red;
+    }
+  }
+  &__item--current a{
+    opacity: .5;
+    border-color: #222;
+  }
+  &__item--empty{
+    border: none;
+  }
+  &__control{
+    display: block;
+    width: fit-content;
+    padding: 4px 9px;
+    text-align: center;
+    background-color: #ededed;
+    color: #ccc;
+    &:hover{
+      background-color: $red;
+      color: $white;
+    }
+    & i{
+      font-size: 2rem;
+      font-weight: 100;
+    }
+    &--active{
+      background-color: $content-color;
+      color: #fff;
+    }
+    &--prev{
+      margin-right: 25px;
+    }
+    &--next{
+      margin-left: 10px;
+      display: block;
+    }
+  }
+  &--blog{
+    justify-content: center;
+  }
+  &--catalog{
+    
+  }
+}
+.pagination {
+  & a.prev, & a.next{
+    display: block;
+    width: fit-content;
+    padding: 4px 9px;
+    text-align: center;
+    background-color: #ededed;
+    color: #ccc;
+    &:hover{
+      background-color: $red;
+      color: $white;
+    }
+    & i{
+      font-size: 2rem;
+      font-weight: 100;
+    }
+  }
+  & .prev{
+    margin-right: 25px;
+  }
+  & .next{
+    margin-left: 10px;
+  }
+  & .page-numbers{
+    display: block;
+    margin-right: 7px;
+    padding: 3px 7px;
+    display: inline-block;
+    border: 1px solid transparent;
+    color: #222;
+    font-size: 1.4rem;
+    @include colorOnHover;
+    &:hover{
+      border-color: $red;
+    }
+    &.current{
+      line-height: 0.4;
+      font-weight: 900;
+      font-size: 1.7rem;
+      &:hover{
+        border-color: transparent;
+        background-color: transparent;
+        color: $content-color;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 575px){
+  .pagination{
+    flex-direction: row;
+    &__display{
+      margin-bottom: 0;
+    }
+  }
+}

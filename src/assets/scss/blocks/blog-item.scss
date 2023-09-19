@@ -1,0 +1,101 @@
+//посты на главной странице блога в слайдере
+.blog-item{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 10px;
+  &__date-value{
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #26b;
+    color: #26b;
+    background-color: rgb(246, 247, 249);
+    font-weight: 700;
+    z-index: 4;
+  }
+  &__date-day{
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 4px;
+  }
+  &__date-month{
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  &__image-wrap{
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  &__image{
+    object-fit: cover;
+    transition: transform .4s ease-in-out;
+  }
+  &__title{
+    padding: 5px 0 0px;
+    margin-bottom: 10px;
+    color: rgb(34, 70, 115);
+    font-size: 1.6rem;
+    font-weight: 700;
+    @include colorOnHover;
+  }
+  &__read-more{
+    display: block;
+    padding: 7px 15px;
+    width: fit-content;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: rgb(34, 34, 34);
+    border: 2px solid rgb(34, 34, 34);
+    text-transform: uppercase;
+    transition: all .4s ease-in-out;
+    &:hover{
+      background-color: rgb(34, 34, 34);
+      color: #fff;
+    }
+  }
+}
+.blog-item:hover .blog-item__image{
+  transform: scale(1.2);
+}
+.blog-section__content .slick-track{
+  display: flex;
+  align-items: stretch;
+}
+.blog-section .slick-initialized .slick-slide{
+  display: flex;
+}
+@media only screen and (min-width: 575px){
+  .blog-item{
+    flex-direction: row;
+    justify-content: space-between;
+    &__image-wrap{
+      width: calc(50% - .5rem);
+    }
+    &__content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: calc(50% - .5rem);
+      padding-right: 15px;
+    }
+  }
+}
+@media only screen and (min-width: 767px){
+  .blog-item{
+    height: 100%;
+    &__excerpt{
+      line-height: 1.7;
+    }
+    &__read-more{
+
+    }
+  }
+}
+@media only screen and (min-width: 991px){}

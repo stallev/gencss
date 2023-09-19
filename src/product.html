@@ -1,0 +1,390 @@
+{% include "templates/base/_page_head.html" %}
+{% include "templates/header/_header.html" %}
+      <main class="main">
+        <div class="main__content">
+          <div class="breadcrumbs">
+            <div class="container">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a href="index.html" class="breadcrumbs__link">
+                    <i class="fas fa-home"></i>
+                  </a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a href="shop.html" class="breadcrumbs__link">
+                    Каталог
+                  </a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a href="product.html" class="breadcrumbs__link">
+                    Товар
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <section class="product">
+            <div class="container">
+              <div class="product__top">
+                <div class="product__sliders-wrap">
+                  <div class="product__sliders">
+                    <div class="product__main-slider">
+                      <div class="product__main-slider-item">
+                        <img src="../img/content/products/product33.jpg" id="zoom1" alt="Кровать AN009" class="product__main-slider-img zoom__img">
+                      </div>
+                      <div class="product__main-slider-item">
+                        <img src="../img/content/products/product33_1.jpg" id="zoom2" alt="Кровать AN009" class="product__main-slider-img zoom__img">
+                      </div>
+                      <div class="product__main-slider-item">
+                        <img src="../img/content/products/product33_2.jpg" id="zoom3" alt="Кровать AN009" class="product__main-slider-img  zoom__img">
+                      </div>
+                      <div class="product__main-slider-item">
+                        <img src="../img/content/products/product33.jpg" id="zoom4" alt="Кровать AN009" class="product__main-slider-img  zoom__img">
+                      </div>
+                      <div class="product__main-slider-item">
+                        <img src="../img/content/products/product33_1.jpg" id="zoom5" alt="Кровать AN009" class="product__main-slider-img  zoom__img">
+                      </div>
+                      <div class="product__main-slider-item">
+                        <img src="../img/content/products/product33_2.jpg" id="zoom6" alt="Кровать AN009" class="product__main-slider-img  zoom__img">
+                      </div>
+                    </div>
+                    <div class="product__thumb-slider">
+                      <div class="product__thumb-slider-item">
+                        <img src="../img/content/products/product33.jpg" alt="Кровать AN009" class="product__thumb-slider-img">
+                      </div>
+                      <div class="product__thumb-slider-item">
+                        <img src="../img/content/products/product33_1.jpg" alt="Кровать AN009" class="product__thumb-slider-img">
+                      </div>
+                      <div class="product__thumb-slider-item">
+                        <img src="../img/content/products/product33_2.jpg" alt="Кровать AN009" class="product__thumb-slider-img">
+                      </div>
+                      <div class="product__thumb-slider-item">
+                        <img src="../img/content/products/product33.jpg" alt="Кровать AN009" class="product__thumb-slider-img">
+                      </div>
+                      <div class="product__thumb-slider-item">
+                        <img src="../img/content/products/product33_1.jpg" alt="Кровать AN009" class="product__thumb-slider-img">
+                      </div>
+                      <div class="product__thumb-slider-item">
+                        <img src="../img/content/products/product33_2.jpg" alt="Кровать AN009" class="product__thumb-slider-img">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product__details-wrap">
+                  <div class="product__details">
+                    <h1 class="product__title">
+                      Кровать AN009
+                    </h1>
+                    <div class="product__meta">
+                      <p class="product__number">
+                        <span class="product__number-text">
+                          Артикул:
+                        </span>
+                        <span class="product__number-value">
+                          12345678
+                        </span>
+                      </p>
+                      <p class="product__producer">
+                        <span class="product__producer-text">
+                          Бренд:
+                        </span>
+                        <span class="product__producer-value">
+                          Orvietto
+                        </span>
+                      </p>
+                    </div>
+                    <div class="product__price">
+                      <span class="product__price-value">1200</span>
+                      <span class="product__price__currency">р</span>
+                    </div>
+                    <p class="product__short-descr">Интересное решение для вашей спальной комнаты. Кровать сделана из прочного материла. Своего рода это «кровать на подставке». С обеих сторон есть полочки для хранения вещей, которые должны быть под рукой. У изголовья кровати расположена удобная перегородка.</p>
+                    <div class="product__paremeters">
+                      <div class="product__variation product__variation--color">
+                        <span class="product__variation-text">
+                          Материал:
+                        </span>
+                        <div class="select-box">
+                          <select name="color" class="select-box__options select-box__options--h">
+                            <option value="" selected="selected">Выберите</option>
+                            <option value="1">Сосна</option>
+                            <option value="2">Дуб срощенный</option>
+                            <option value="3">Дуб цельноламельный</option>
+                            <option value="4">Дикий дуб</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product__count-block">
+                      <div class="product__variation product__variation--count">
+                        <span class="product__variation-text">
+                          Количество:
+                        </span>
+                        <div class="count-box">
+                          <div class="count-box__input-group">
+                            <button class="count-box__minus"></button>
+                            <input type="number" class="count-box__value" min="1" max="1000000" value="1">
+                            <button class="count-box__plus"></button>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="product__add-to-cart">
+                        <i class="far fa-shopping-cart"></i>
+                        <span>в корзину</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product__bottom">
+                <div class="product__info">
+                  <ul class="product__info-nav">
+                    <li class="product__info-nav-item">
+                      <a href="product.html#product__info-descr" class="product__info-nav-link product__info-nav-link--active" data-tab-id="product__info-descr">описание</a>
+                    </li>
+                    <li class="product__info-nav-item">
+                      <a href="product.html#product__info-shipping" class="product__info-nav-link" data-tab-id="product__info-shipping">доставка и возврат</a>
+                    </li>
+                    <li class="product__info-nav-item">
+                      <a href="product.html#product__info-reviews" class="product__info-nav-link" data-tab-id="product__info-reviews">отзывы</a>
+                    </li>
+                  </ul>
+                  <div class="product__info-content">
+                    <div class="product__info-content-item product__info-content-item--active" id="product__info-descr">
+                      <ul class="product__info-option-list">
+                        <li class="product__info-option-item">
+                          <span class="product__info-option-name">Материал:</span>
+                          <span class="product__info-option-value">Массив дуба</span>
+                        </li>
+                        <li class="product__info-option-item">
+                          <span class="product__info-option-name">
+                            Страна дизайна:
+                          </span>
+                          <span class="product__info-option-value">
+                            Беларусь
+                          </span>
+                        </li>
+                        <li class="product__info-option-item">
+                          <span class="product__info-option-name">
+                            Страна производителя:
+                          </span>
+                          <span class="product__info-option-value">
+                            Беларусь
+                          </span>
+                        </li>
+                        <li class="product__info-option-item">
+                          <span class="product__info-option-name">
+                            Цвет:
+                          </span>
+                          <span class="product__info-option-value">
+                            Белый
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="product__info-content-item" id="product__info-shipping">
+                      <div class="product__info-content-item-header">
+                        <h4 class="product__info-content-item-title">Условия доставки</h4>
+                      </div>
+                        <div class="policy-item">
+                          <p class="product__info-content-item-text">
+                            Здесь вы можете изучить условия доставки по (стране / региону / городу)
+                          </p>
+                        </div>
+                        <div>
+                          <h4 class="product__info-content-item-subtitle">
+                            Цены
+                          </h4>
+                          <ul class="product__info-content-item-text-list">
+                            <li>1. доставка в пределах города – бесплатно</li>
+                            <li>2. доставка по региону – 10 рублей</li>
+                            <li>3. доставка по стране – 20 рублей</li>
+                          </ul>
+                          <p class="product__info-content-item-text">
+                            Важно: у нас действуют скидки, получив которые, вы получите бесплатную доставку до вашей двери.
+                          </p>
+                      </div>
+                    </div>
+
+                    <div class="product__info-content-item" id="product__info-reviews">
+                      <div class="product__info-content-item-header">
+                        <h4 class="product__info-content-item-title">Средний рейтинг</h4>
+                        <div class="product__rating">
+                          <div class="product__stars-block">
+                            <div class="rating-mini">
+                              <span class="rating-mini__value">
+                                3.03
+                              </span>
+                              <span class="rating-mini__item rating-mini__item--active"></span>
+                              <span class="rating-mini__item rating-mini__item--active"></span>
+                              <span class="rating-mini__item rating-mini__item--active"></span>
+                              <span class="rating-mini__item"></span>
+                              <span class="rating-mini__item"></span>
+                            </div>
+                          </div>
+                          <a href="#" class="product__reviews-link">
+                            <span>(6 отзывов)</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="author__reviews">
+                        <div class="author__wrap">
+                          <figure>
+                            <a href="blog.html" class="author__profile-link">
+                              <img src="../img/content/blog/comments/1.jpg" alt="Юлия Михальченко" class="author__img">
+                            </a>
+                          </figure>
+                          <div class="author__details">
+                            <div class="author__details-wrap">
+                              <div class="author__details-person">
+                                <a href="blog.html" class="author__name">Юлия Михальченко</a>
+                                <span class="author__time">Май 15, 2020 в 12:19</span>
+                              </div>
+                              <div class="author__reply">
+                                <div class="product__rating">
+                                  <div class="product__stars-block">
+                                    <div class="rating-mini">
+                                      <span class="rating-mini__value">
+                                        3.03
+                                      </span>
+                                      <span class="rating-mini__item rating-mini__item--active"></span>
+                                      <span class="rating-mini__item rating-mini__item--active"></span>
+                                      <span class="rating-mini__item rating-mini__item--active"></span>
+                                      <span class="rating-mini__item"></span>
+                                      <span class="rating-mini__item"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <p class="author__descr">
+                              Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros euerat. Aliquam erat volutpat.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="author__wrap">
+                          <figure>
+                            <a href="blog.html" class="author__profile-link">
+                              <img src="../img/content/blog/comments/2.jpg" alt="Юлия Михальченко" class="author__img">
+                            </a>
+                          </figure>
+                          <div class="author__details">
+                            <div class="author__details-wrap">
+                              <div class="author__details-person">
+                                <a href="blog.html" class="author__name">Елена Пастухова</a>
+                                <span class="author__time">Май 16, 2020 в 10:55</span>
+                              </div>
+                              <div class="author__reply">
+                                <div class="product__rating">
+                                  <div class="product__stars-block">
+                                    <div class="rating-mini">
+                                      <span class="rating-mini__value">
+                                        3.03
+                                      </span>
+                                      <span class="rating-mini__item rating-mini__item--active"></span>
+                                      <span class="rating-mini__item rating-mini__item--active"></span>
+                                      <span class="rating-mini__item rating-mini__item--active"></span>
+                                      <span class="rating-mini__item"></span>
+                                      <span class="rating-mini__item"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <p class="author__descr">
+                              Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros euerat. Aliquam erat volutpat.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="author__wrap">
+                          <figure>
+                            <a href="blog.html" class="author__profile-link">
+                              <img src="../img/content/blog/comments/1.jpg" alt="Юлия Михальченко" class="author__img">
+                            </a>
+                          </figure>
+                          <div class="author__details">
+                            <div class="author__details-wrap">
+                              <div class="author__details-person">
+                                <a href="blog.html" class="author__name">Юлия Михальченко</a>
+                                <span class="author__time">Май 20, 2020 в 14:15</span>
+                              </div>
+                              <div class="author__reply">
+                                <div class="product__rating">
+                                  <div class="product__stars-block">
+                                    <div class="rating-mini">
+                                      <span class="rating-mini__value">
+                                        3.03
+                                      </span>
+                                      <span class="rating-mini__item rating-mini__item--active"></span>
+                                      <span class="rating-mini__item rating-mini__item--active"></span>
+                                      <span class="rating-mini__item rating-mini__item--active"></span>
+                                      <span class="rating-mini__item"></span>
+                                      <span class="rating-mini__item"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <p class="author__descr">
+                              Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros euerat. Aliquam erat volutpat.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product__info-add-review">
+                        <form action="#" class="mail-us__form contact-form contact-form--comments">
+                          <h4 class="contact-form__title">
+                            Оставить отзыв
+                          </h4>
+                          <p class="contact-form__descr">
+                            Ваш электронный адрес не будет опубликован. Обязательные поля помечены *
+                          </p>
+                          <div class="contact-form__input-block">
+                            <div class="row contact-form__input-list">
+                              <div class="col-12">
+                                <textarea placeholder="Ваше сообщение *" class="contact-form__input-field contact-form__input-field--message" name="person-message"  cols="30" rows="4"></textarea>
+                              </div>
+                              <div class="col-md-6">
+                                <input type="text" placeholder="Имя *" name="person-name" class="contact-form__input-field contact-form__input-field--name">
+                              </div>
+                              <div class="col-md-6">
+                                <input type="text" placeholder="Электронная почта *" name="person-email" class="contact-form__input-field contact-form__input-field--email">
+                              </div>
+                            </div>
+                          </div>
+                          <button class="contact-form__submit-btn" type="submit">отправить &#10141;</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="products-list">
+            <div class="container container--popular">
+              <div class="section-title">
+                <h2 class="section-title__text section-title__text--popular">
+                  популярные товары
+                </h2>
+              </div>
+              <div class="products-list__inner--popular-slider">
+                {% include "templates/product/_product_thumb.html" %}
+                {% include "templates/product/_product_thumb.html" %}
+                {% include "templates/product/_product_thumb.html" %}
+                {% include "templates/product/_product_thumb.html" %}
+                {% include "templates/product/_product_thumb.html" %}
+                {% include "templates/product/_product_thumb.html" %}
+                {% include "templates/product/_product_thumb.html" %}
+                {% include "templates/product/_product_thumb.html" %}
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+{% include "templates/footer/_footer.html" %}
+</div>
+{% include "templates/modals/_order_form.html" %}
+{% include "templates/modals/_mobile_nav.html" %}
+{% include "templates/base/_add_scripts.html" %}
+</body>
+</html>

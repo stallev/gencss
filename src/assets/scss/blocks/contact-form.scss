@@ -1,0 +1,62 @@
+.contact-form{
+  padding: 0 20px;
+  background: #f6f7f9;
+  &--comments{
+    padding: 30px 20px 20px;
+  }
+  &__title{
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #222;
+  }
+  &__descr{
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    color: #999;
+  }
+  &__input-block{
+    margin-bottom: 20px;
+  }
+  &__input-list div{
+    margin-bottom: 20px;
+  }
+  &__input-field{
+    display: block;
+    width: 100%;
+    min-height: 4rem;
+    padding: .85rem 2rem;
+    background: #fff;
+    border-color: transparent;
+    transition: border-color .3s;
+    border: 1px solid #e3e3e3;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #664;
+    border-radius: 0;
+    box-shadow: none;
+    outline: 0;
+  }
+  &__input-field--message{
+    min-height: 120px;
+    max-height: 150px;
+  }
+  &__submit-btn{
+    display: inline-block;
+    padding: 10px 17px;
+    font-size: 1.3rem;
+    outline: 0;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    background-color: $red;
+    transition: color .3s,border-color .3s,background-color .3s,box-shadow .3s;
+    text-transform: uppercase;
+    &:hover{
+      background-color: #999;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.brands{
+  
+}
+.brand__image{
+  display: block;
+  margin: 0 auto;
+}
+//интервалы между слайдами
+.brands__list {
+  /* the slides */
+  & .slick-track{
+    display: flex;
+    align-items: center;
+  }
+  & .slick-slide {
+    margin-left:20px;
+  }
+  /* the parent */
+  & .slick-list {
+    margin-left:-20px;
+  }
+}

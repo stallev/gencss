@@ -1,0 +1,144 @@
+{% include "templates/base/_page_head.html" %}
+{% include "templates/header/_header.html" %}
+      <main class="main">
+        <div class="container">
+          <div class="steps-nav-wrap">
+            <nav class="steps-nav">
+              <ul class="steps-nav__list">
+                <li class="steps-nav__item">
+                  <a href="cart.html" class="steps-nav__link">1.Список товаров</a>
+                </li>
+                <li class="steps-nav__item">
+                  <a href="checkout.html" class="steps-nav__link">2.Оформление заказа</a>
+                </li>
+                <li class="steps-nav__item">
+                  <a href="order.html" class="steps-nav__link steps-nav__link--active">3.Подтверждение заказа</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="container">
+          <div class="checkout">
+            <div class="checkout__order-message">
+              <i></i>
+              <h2 class="checkout__order-message-title">
+                <i class="fas fa-check"></i>&nbsp;&nbsp;Благодарим Вас. Ваш заказ принят в обработку.
+              </h2>
+            </div>
+            <div class="checkout__order-results">
+              <ul class="checkout__order-results-list">
+                <li class="checkout__order-results-item">
+                  <span class="checkout__order-results-item-name">Номер заказа</span>
+                  <span class="checkout__order-results-item-value">4935</span>
+                </li>
+                <li class="checkout__order-results-item">
+                  <span class="checkout__order-results-item-name">Статус</span>
+                  <span class="checkout__order-results-item-value">Обрабатывается</span>
+                </li>
+                <li class="checkout__order-results-item">
+                  <span class="checkout__order-results-item-name">Дата</span>
+                  <span class="checkout__order-results-item-value">20.11.2020</span>
+                </li>
+                <li class="checkout__order-results-item">
+                  <span class="checkout__order-results-item-name">Итого</span>
+                  <span class="checkout__order-results-item-value">2260р</span>
+                </li>
+                <li class="checkout__order-results-item">
+                  <span class="checkout__order-results-item-name">Метод оплаты</span>
+                  <span class="checkout__order-results-item-value">Наложенным платежом</span>
+                </li>
+
+              </ul>
+            </div>
+            <div class="checkout__item checkout__item--pt0">
+              <h2>детали заказа</h2>
+            </div>
+            <div class="checkout__order-info checkout__order-info--finished">
+              <div class="checkout__item checkout__item--goods">
+                <h3 class="checkout__item-goods-total-title">Товар</h3>
+                <div class="checkout__item-goods-row-list">
+                  <div class="checkout__item-goods-row checkout__item-goods-row--bb0">
+                    <p>
+                      <span class="checkout__item-goods-name">
+                        Всесезонная шина Goodyear Vector 4Seasons
+                      </span>
+                      <i class="fas fa-times"></i>
+                      <span class="checkout__item-goods-count">1</span>
+                    </p>
+                    <span class="checkout__item-goods-price">6000 р</span>
+                  </div>
+                  <div class="checkout__item-goods-row checkout__item-goods-row--bb0">
+                    <p>
+                      <span class="checkout__item-goods-name">
+                        Зимняя шина Nokian Nordman RS2 185/65R15 92R
+                      </span>
+                      <i class="fas fa-times"></i>
+                      <span class="checkout__item-goods-count">1</span>
+                    </p>
+                    <span class="checkout__item-goods-price">5880 р</span>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout__item checkout__item--subtotal">
+                <h3 class="checkout__item-subtitle">
+                  Итого
+                </h3>
+                <span class="checkout__item-subtotal-value">11580р</span>
+              </div>
+              <div class="checkout__item checkout__item--last-table">
+                <h3 class="checkout__item-subtitle">
+                  Доставка
+                </h3>
+                <span class="checkout__item-last-table-option">
+                  Бесплатная доставка
+                </span>
+              </div>
+              <div class="checkout__item checkout__item--last-table">
+                <h3 class="checkout__item-subtitle">
+                  Метод оплаты
+                </h3>
+                <span class="checkout__item-last-table-option">
+                  Наложенным платежом
+                </span>
+              </div>
+              <div class="checkout__item">
+                <div class="checkout__item-inner-total-wrap">
+                  <h3>
+                    Итого
+                  </h3>
+                  <span>11580р</span>
+                </div>
+              </div>
+            </div>
+            <div class="checkout__item checkout__item--billing-address">
+              <h2>Платежный адрес</h2>
+              <div class="checkout__item-simple-text-item-list">
+                <p class="checkout__item-simple-text-item">
+                  Иван Иванов
+                </p>
+                <p class="checkout__item-simple-text-item">
+                  ООО "Компания"
+                </p>
+                <p class="checkout__item-simple-text-item">
+                  Беларусь
+                </p>
+                <p class="checkout__item-simple-text-item">
+                  <span>телефон: </span>+000 00 000-00-00
+                </p>
+                <p class="checkout__item-simple-text-item">mail@company.com</p>
+              </div>
+            </div>
+            <a href="cart.html" class="checkout__btn-sec checkout__btn-sec--to-cart-html">
+              <i class="fal fa-long-arrow-left"></i>
+              <span>вернуться к списку товаров</span>
+            </a>
+        </div>
+      </main>
+{% include "templates/footer/_footer.html" %}
+</div>
+{% include "templates/modals/_order_form.html" %}
+{% include "templates/modals/_mobile_nav.html" %}
+{% include "templates/base/_add_scripts.html" %}
+</body>
+</html>

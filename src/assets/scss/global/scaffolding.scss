@@ -1,0 +1,92 @@
+img{
+  max-width: 100%;
+}
+html{
+  font-size: $font-size;
+}
+body{
+  margin: 0;
+}
+div, p, ul, article, li, a, span, h1, h2, h3, h4, h5{
+  box-sizing: border-box;
+}
+figure{
+  margin: 0;
+}
+.row{
+  margin-left: -15px;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  text-transform: none;
+}
+div, section, article, span, h1, h2, h3, h4, h5, ul, li{
+  //outline: 1px solid green;
+}
+button{
+  background-color: transparent;
+  border-color: transparent;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+}
+ul, p{
+  margin: 0;
+  padding: 0;
+}
+ul>li{
+  list-style-type: none;
+}
+h1, h2, h3, h4, h5{
+  margin: 0;
+}
+del, ins {
+  text-decoration: none;
+}
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+.hidden-items{
+  transition: all .4s ease-in-out;
+  display: none;
+}
+
+//убираем обводки при  нажатии
+a.active.focus,
+a.active:focus,
+a.focus,
+a:active.focus,
+a:active:focus,
+a:focus,
+button.active.focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button:active:focus,
+button:focus,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+outline: 0!important;
+outline-color: transparent!important;
+outline-width: 0!important;
+outline-style: none!important;
+box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
+}
+div, select, button, input, textarea{
+  &:focus,
+  &:active{
+    outline: 0;
+  }
+}
+.slick-slide:focus { outline: none; }

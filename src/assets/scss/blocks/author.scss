@@ -1,0 +1,136 @@
+.author{
+  background-color: #f2f3f5;
+  &__wrap{
+    display: flex;
+    align-items: flex-start;
+    padding: 4rem 2rem 4.3rem;
+  }
+  &__profile-link{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__img{}
+  &__details{
+    margin-left: 30px;
+  }
+  &__name{
+    margin-bottom: .4rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #222;
+    @include colorOnHover;
+  }
+  &__time{
+    display: block;
+    font-size: 1.3rem;
+  }
+  &__all-articles{
+    display: inline-block;
+    margin: 10px 0 27px;
+    font-size: 1.4rem;
+    @include colorOnHover;
+  }
+  &__descr{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+  }
+}
+
+//блок с комментариями
+.author__comments{
+  & .author__comments-title{
+    margin-top: 30px;
+    padding: 15px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #222;
+  }
+  & .author__wrap:first-of-type{
+    border-top: none;
+  }
+  & .author__wrap{
+    padding-top: 35px;
+    border-top: 1px solid rgb(153, 153, 153);
+  }
+  & .author__wrap--level-2{
+    margin-left: 30px;
+  }
+  & .author__details-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  & .author__descr{
+    margin: 0;
+  }
+  & .author__reply{
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+    text-transform: uppercase;
+    transition: all .3s ease-in;
+    &::after{
+      position: absolute;
+      display: block;
+      content: '';
+      // opacity: 0;
+      // visibility: hidden;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      transition: all .3s ease-in-out;
+    }
+  }
+  & .author__reply:hover{
+    color: $red;
+    text-decoration: underline;
+    &::after{
+      display: block;
+    }
+  }
+}
+.author__reviews{
+  border-bottom: 1px solid #ccc;
+  & .author__wrap:first-of-type{
+    border-top: none;
+  }
+  & .author__wrap{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid rgb(153, 153, 153);
+  }
+  & .author__details-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  & .author__descr{
+    margin: 0;
+  }
+  & .author__rating{
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 767px){
+  .author{
+    &__details-wrap{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0;
+      margin-bottom: 27px;
+    }
+    &__all-articles{
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,185 @@
+.catalog-sidebar{
+  transition: margin .4s ease-in;
+}
+// стили для сайдбара на мобильных экранах
+.catalog-sidebar__content{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: calc(100vw - 25px);
+  max-width: 290px;
+  padding: 0 20px;
+  transform: translateX(-290px);
+  overflow: scroll;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  line-height: 1.3;
+  transition: transform .4s,opacity .4s;
+  z-index: 121;
+}
+.catalog-sidebar__overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #222;
+  transition: visibility .4s,opacity .4s;
+  z-index: 99;
+}
+.catalog-sidebar__icon-close{
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid $brd-c;
+  border-radius: 50%;
+  transition: all .3s ease-in;
+  &::after, &::before{
+    display: block;
+    position: absolute;
+    content: '';
+    top: 12.4px;
+    right: 5.7px;
+    width: 15px;
+    height: 2px;
+    background-color: $white;
+    transition: all .3s ease-in;
+  }
+  &::after{
+    transform: rotate(45deg);
+  }
+  &::before{
+    transform: rotate(-45deg);
+  }
+  &:hover{
+    background-color: $red;
+    border-color: transparent;
+    &::after, &::before{
+      background-color: $white;
+    }
+  }
+}
+body.sidebar-active .catalog-sidebar__content{
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+}
+.catalog-sidebar__icon-close-wrap{
+  display: none;
+}
+body.sidebar-active .catalog-sidebar__icon-close-wrap{
+  display: block;
+  z-index: 100;
+}
+body.sidebar-active .catalog-sidebar__overlay{
+  opacity: .8;
+  visibility: visible;
+}
+.closed-left-sidebar{
+  margin-left: -25%;
+  height: 0;
+}
+
+.closed-left-sidebar+.products-list__wrap--catalog{
+  max-width: 100%;
+  flex-basis: 100%;
+}
+.catalog-sidebar__icon-close-wrap{
+  position: fixed;
+  top: 15px;
+  left: calc(100vw - 65px);
+  cursor: pointer;
+  }
+.catalog-sidebar__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  & span{
+    display: block;
+    width: fit-content;
+    color: $red;
+  }
+}
+.catalog-sidebar__toggle,
+.catalog-sidebar__open{
+  position: relative;
+  padding: 10px;
+  transition: all .4s ease-in;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover{
+    background-color: #26b;
+    color: #fff;
+  }
+}
+.products-list__controls-list span.catalog-sidebar__toggle,
+.catalog-sidebar__header span.catalog-sidebar__toggle{
+  padding: 4px 15px 4px 15px;
+  background-color: $content-color;
+  text-transform: capitalize;
+  color: $white;
+  border-radius: 20px;
+  transition: all .4s ease-in;
+  font-size: 1.4rem;
+  cursor: pointer;
+  &:hover{
+    background-color: $red;
+    color: #fff;
+  }
+}
+.catalog-sidebar__toggle:hover::before,
+.catalog-sidebar__open:hover::before{
+  color: #fff;
+}
+.catalog-sidebar__clear-all{
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+@media only screen and (min-width: 575px){
+  .catalog-sidebar__icon-close-wrap{
+    position: fixed;
+    top: 15px;
+    left: calc(100vw - 67px);
+    cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 991px){
+  .catalog-sidebar{
+    margin-bottom: 40px;
+    padding-top: 50px;
+    border-radius: 4px;
+  }
+  
+  .catalog-sidebar__content{
+    position: relative;
+    padding: 0 13px;
+    width: auto;
+    transform: translateX(0);
+    overflow: auto;
+    background-color: #fff;
+    opacity: 1;
+    visibility: visible;
+    transition: transform .4s,opacity .4s;
+    z-index: 10;
+  }
+  //скрыть кнопку возвращения левого сайдбара
+  .products-list__controls-list .catalog-sidebar__toggle{
+    display: none;
+  }
+
+  .catalog-sidebar__header {
+    @media only screen and (min-width: 991px) {
+      display: none;
+    }
+  }
+}

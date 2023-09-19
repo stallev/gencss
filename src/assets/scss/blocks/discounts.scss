@@ -1,0 +1,59 @@
+.discounts{
+  background-color: $white;
+  & .main-slider__slick-dots{
+    bottom: 15px;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+  }
+  &__slider-wrap{
+    padding-bottom: 60px;
+  }
+  &__slider,
+  &__slider .woocommerce.columns-4 {
+    @include horizontalProductSliderAppearance();
+  }
+}
+// .discounts__slider:hover .discounts__slider-prev
+// .discounts__slider:hover .discounts__slider-next{
+//   opacity: 1;
+//   visibility: visible;
+// }
+
+.discounts__slider,
+.discounts__slider .woocommerce.columns-4 {
+  
+  //выровнять слайды по высоте
+  // & .slick-track {
+  //   display: flex;
+  //   align-items: flex-end;
+  // }
+}
+@media only screen and (min-width: 767px){
+  .discount-prev,
+  .discount-next{
+    position: absolute;
+    top: -64px;
+    font-size: 1.7rem;
+    color: #222;
+  }
+  .discount-prev{
+    right: 20px;
+  }
+  .discount-next{
+    right: 0px;
+  }
+}
+@media only screen and (min-width: 991px){
+  .discounts{
+    &__slider-wrap{
+      flex-grow: 2;
+      margin-left: 27px;
+      padding-bottom: 0;
+    }
+    &__content{
+      flex-direction: row;
+    }
+  }
+}

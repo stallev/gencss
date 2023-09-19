@@ -1,0 +1,47 @@
+.social{
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  
+  &__link{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin: 0 5px;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px solid $brd-c;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    transition: all .4s ease-in-out;
+    &--facebook{
+      color: $dark-blue;
+    }
+    &--twitter{
+      color: blue;
+    }
+    &--vk{
+      color: #26b;
+    }
+    &:hover{
+      color: $white;
+      background-color: $red;
+      border-color: $red;
+    }
+  }
+}
+.social__link--store{
+  color: #fff;
+  &:hover{
+    color: #fff;
+  }
+}
+.social__link--store:hover{
+  background-color: $red;
+  border-color: $red;
+}
+.social__link--team:hover{
+  background-color: $red;
+  border-color: $red;
+}

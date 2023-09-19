@@ -1,0 +1,24 @@
+%fl-col{
+  display: flex;
+  flex-direction: column;
+}
+%service-slider-padding{
+  padding: 0 10px;
+}
+%side-padding{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+%side-paddingTablet{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+%trOpacity{
+  transition: opacity .3s ease-in-out;
+}
+
+%checkoutSmalBlackText{
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #222;
+}

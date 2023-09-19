@@ -1,0 +1,29 @@
+.login {
+  &__form-inputs-wrap {
+    display: grid;
+    grid-template-columns: minmax(auto, 250px);
+    gap: 30px;
+    margin-bottom: 15px;
+
+    @media only screen and (min-width: 767px) {
+      grid-template-columns: minmax(auto, 250px) minmax(auto, 250px);
+
+      .woocommerce-form-row {
+        max-width: 250px;
+      }
+    }
+  }
+
+  &__action button {
+    margin-left: 15px;
+  }
+
+  .lost_password {
+    margin-top: 10px;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+}

@@ -1,0 +1,43 @@
+.modal-notification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px !important;
+  text-align: center;
+  background: $white !important;
+
+  &--ok {
+    color: $red;
+  }
+  &--error {
+    color: red;
+  }
+
+  &__symbol {
+    display: inline-block;
+    width: fit-content;
+    margin-bottom: 20px;
+    font-size: 50px;
+    line-height: 1.2;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 700;
+    margin-bottom: 16px;
+    @media only screen and (min-width:$tablet-width) {
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.5;
+    color: $textColor;
+  }
+}
+
+@media only screen and (min-width:$tablet-width){
+  
+}

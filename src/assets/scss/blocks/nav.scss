@@ -1,0 +1,129 @@
+.nav{
+	position: absolute;
+  display: flex;
+	flex-direction: column;
+	top: 120px;
+	opacity: 0;
+	visibility: hidden;
+	margin-right: 2px;
+	font-size: 1.5rem;
+}
+@media only screen and (min-width: 991px){
+  .nav{
+		position: static;
+    display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin-right: 20px;
+		opacity: 1;
+		visibility: visible;
+    &__list{
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 0;
+		}
+		&__item{
+			position: relative;
+			padding: 10px 5px;
+		}
+		&__link{
+			display: block;
+			padding: 15px 10px;
+			font-size: 1.3rem;
+			color: $titleColor;
+			font-weight: 500;
+			transition: all .3s ease-in-out;
+			text-transform: uppercase;
+			&--subtitle{
+				position: relative;
+				padding-right: 22px;
+				&::after{
+					position: absolute;
+					display: block;
+					content: '';
+					top: 52%;
+					right: 9px;
+					width: 5px;
+					height: 1px;
+					transform: rotate(45deg);
+					background-color: $titleColor;
+				}
+				&::before{
+					position: absolute;
+					display: block;
+					content: '';
+					top: 52%;
+					right: 6px;
+					width: 5px;
+					height: 1px;
+					transform: rotate(-45deg);
+					background-color: $titleColor;
+				}
+			}
+			&--sub-nav{
+				
+			}
+		}
+		&__sub1-list{
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			top: 40px;
+			opacity: 0;
+			visibility: hidden;
+			border-radius: 3px;
+			transition: all .3s ease-in-out;
+			background-color: $headerBottomBgColor;
+			pointer-events: none;
+			width: max-content;
+			padding: 15px 20px;
+			box-shadow:0 2px 35px rgba(0,0,0,0.1);
+			z-index: 13;
+		}
+
+		&__sub1-list .nav__item,
+		&__sub1-list .nav__sub1-item {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 0;
+
+			& a {
+				display: block;
+				font-weight: 400;
+				padding: 10px 0;
+				font-size: 1.4rem;
+				transition: all .3s ease-in-out;
+				color: $titleColor;
+				text-transform: none;
+				@include textColorOnHover;
+			}
+		}
+  }
+
+  .nav__item:hover .nav__sub1-list {
+    border-top: 35px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+		color: $content-color;
+  }
+	.nav__item > a.nav__link:hover{
+		color: $red;
+
+		&::before, &::after{
+			background-color: $red;
+		}
+	}
+
+	a.nav__link--sub-nav{
+		color: $titleColor;
+	}
+
+	.nav__list .nav__item:first-of-type .nav__link{
+		padding-left: 0;
+	}
+}

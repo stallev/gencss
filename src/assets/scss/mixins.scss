@@ -1,0 +1,292 @@
+@mixin for-tablet-width {
+  @media (min-width: $tablet-width) { @content; }
+}
+@mixin respond-to($media) {
+  @if $media == tabletAndWider {
+    @media only screen and (min-width: $tablet-width) { @content; }
+  }
+  @else if $media == desctop {
+    @media only screen and (min-width: $desctop-width) { @content; }
+  }
+}
+
+@mixin paragraphStyle {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $content-color;
+  line-height: 1.5;
+}
+
+@mixin paragraphPageContentStyle {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: $content-color;
+  line-height: 1.5;
+}
+
+@mixin valueStyle {
+  font-size: 1.6rem;
+  color: $content-color;
+  line-height: 1.8rem;
+}
+
+@mixin h1Styles {
+  font-size: 3.5rem;
+  line-height: 1.125;
+  text-transform: uppercase;
+}
+
+@mixin h2Styles {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.125;
+  text-transform: uppercase;
+}
+
+@mixin h3Styles {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.125;
+  text-transform: uppercase;
+}
+
+@mixin checkoutThStyle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: $content-color;
+}
+
+@mixin ruleItemH3Style {
+  font-weight: 700;
+  font-size: 2rem;
+  color: $content-color;
+}
+
+@mixin pageTitleStyle {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 2.8rem;
+  font-family: 'Lato';
+  font-weight: 700;
+  color: #222;
+}
+
+@mixin colorOnHover {
+  transition: color .3s ease-in-out;
+    &:hover{
+      background-color: $red;
+      color: $white;
+    }
+}
+
+@mixin textColorOnHover {
+  transition: all .3s ease-in-out;
+    &:hover{
+      color: $red;
+    }
+}
+
+
+@mixin submitBtnStyles {
+  display: block;
+  padding: 10px 15px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background-color: $red;
+  color: $white;
+  text-transform: uppercase;
+  transition: background-color .4s ease-in-out;
+  
+  &:hover {
+    cursor: pointer;
+    background-color: #999;
+  }
+}
+
+@mixin checkoutBtn {
+  display: inline-flex;
+  flex-grow: 0;
+  width: fit-content;
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: 2px solid #e4eaec;
+  background-color: #e4eaec;
+  color: #222;
+  outline: 0;
+  border-radius: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  transition: color .3s,border-color .3s,background-color .3s,box-shadow .3s;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:hover {
+    color: #222 !important;
+    border-color: #cfdadd;
+    background-color: #cfdadd;
+  }
+
+  & i {
+    display: block;
+    width: fit-content;
+    margin-right: 10px;
+  }
+}
+
+@mixin ordinaryInputField {
+  display: block;
+  flex-grow: 2;
+  width: 100%;
+  outline: 0;
+  min-height: 4rem;
+  padding: .85rem 2rem;
+  border: 1px solid #e3e3e3;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #664;
+
+  &:focus {
+    border-color: #26b;
+  }
+}
+@mixin horizontalProductSliderAppearance {
+  position: relative;
+  padding-bottom: 45px;
+
+  &-slick-dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 0;
+    transform: translate(-50%,0);
+    left: 50%;
+    margin-right: -50%;
+    bottom: 0px;
+    & button{
+      display: block;
+      margin: 0 6px;
+      font-size: 0;
+      min-width: none;
+      width: 11px;
+      height: 11px;
+      background-color: #fff;
+      border: 1px solid lightgrey;
+      border-radius: 50%;
+      transition: background-color .2s ease-in-out;
+      &:hover{
+        background-color: grey;
+      }
+    }
+    & .slick-active button {
+      background-color: $yellow;
+      width: 30px;
+      border-color: $white;
+      border-radius: 5px;
+    }
+  }
+  
+  & .slick-slide {
+    margin-left:27px;
+  }
+  & .slick-list {
+    margin-left:-27px;
+  }
+
+}
+
+@mixin btnColor{
+  background: $btnBgColor;
+  color: $white;
+  transition: color .3s ease-in-out;
+    &:hover{
+      background-color: $red;
+      color: $white;
+    }
+}
+
+@mixin absoluteYCenter {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+@mixin absoluteXCenter {
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
+}
+
+@mixin absoluteAllCenter {
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+//submit button
+@mixin submitBtn {
+  padding: 10px 15px;
+  font-weight: 700;
+  background-color: $red;
+  color: $white;
+  text-transform: uppercase;
+  transition: background-color .3s ease-in-out;
+  &:hover{
+    cursor: pointer;
+    background-color: #999;
+  }
+}
+
+@mixin imageCover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+//close button
+@mixin closeBtn ($color) {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid $brd-c;
+  border-radius: 50%;
+  transition: all .3s ease-in;
+  &::after, &::before{
+    display: block;
+    position: absolute;
+    content: '';
+    top: 12.4px;
+    right: 5.7px;
+    width: 15px;
+    height: 2px;
+    background-color: $color;
+    transition: all .3s ease-in;
+  }
+  &::after{
+    transform: rotate(45deg);
+  }
+  &::before{
+    transform: rotate(-45deg);
+  }
+  &:hover{
+    background-color: $red;
+    border-color: transparent;
+    &::after, &::before{
+      background-color: $white;
+    }
+  }
+}

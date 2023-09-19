@@ -1,0 +1,49 @@
+<div class="modal__wrap">
+  <div class="modal__overlay"></div>
+  <div class="container container--modal">
+    <div class="modal__content modal__content--call-form">
+      <div class="modal__icon-close-wrap closeFormBtn">
+        <span class="modal__icon-close"></span>
+      </div>
+      <h2 class="modal__title">
+        Заказать звонок
+      </h2>
+      <p class="modal__description">
+        Оставьте свои данные, и мы перезвоним Вам в течение 15 минут
+      </p>
+      <form class="modal__form">
+        <div class="modal__form-inner-wrap">
+          <input type="text" class="input-field checkout__input-text-field" placeholder="Ваше имя" name="person-name" required="">
+          <input type="tel" class="input-field input-field--phone checkout__input-text-field" placeholder="Ваш номер телефона" name="person-phone" required="">
+          <button type="submit" class="action action--submit-form btn btn--md-submit">
+            отправить
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="modal__content modal__content--success-send modal-notification modal-notification--ok">
+      <div class="modal__icon-close-wrap closeFormBtn">
+        <span class="modal__icon-close"></span>
+      </div>
+      <span class="modal-notification__symbol">&#10004;</span>
+      <h2 class="modal-notification__title">
+        Сообщение успешно отправлено
+      </h2>
+      <p class="modal-notification__text">
+        Мы вскоре Вам позвоним
+      </p>
+    </div>
+    <div class="modal__content modal__content--error-send modal-notification modal-notification--error">
+      <div class="modal__icon-close-wrap closeFormBtn">
+        <span class="modal__icon-close"></span>
+      </div>
+      <span class="modal-notification__symbol">&#9888;</span>
+      <h2 class="modal-notification__title">
+        Что-то пошло не так
+      </h2>
+      <p class="modal-notification__text">
+        Пожалуйста, наберите по номеру +375-33-6-585-585
+      </p>
+    </div>
+  </div>
+</div>

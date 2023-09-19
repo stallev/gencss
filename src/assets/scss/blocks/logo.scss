@@ -1,0 +1,21 @@
+.logo{
+  display: flex;
+  align-items: center;
+  & a{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__icon{
+    display: inline-block;
+    min-width: 108px;
+  }
+}
+.logo--footer{
+  display: block;
+  width: 163px;
+}
+@media only screen and (min-width: 360px){
+  .logo{
+    max-width: 200px;
+  }
+}

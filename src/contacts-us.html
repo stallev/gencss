@@ -1,0 +1,110 @@
+{% include "templates/base/_page_head.html" %}
+{% include "templates/header/_header.html" %}
+      <main class="main">
+        <div class="main__content">
+          <div class="breadcrumbs">
+            <div class="container">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a href="index.html" class="breadcrumbs__link">
+                    <i class="fas fa-home"></i>
+                  </a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a href="contacts-us.html" class="breadcrumbs__link">
+                    Контакты
+                  </a>
+              </ul>
+            </div>
+          </div>
+          <section class="page-header page-header--catalog">
+            <div class="container">
+              <div class="page-title page-title--contact-us">
+                <h1 class="page-title__text">
+                  Наши контакты
+                </h1>
+              </div>
+            </div>
+          </section>
+          <section class="mail-us">
+            <div class="container container--mail-us">
+              <div class="mail-us__inner-wrap">
+                <div class="mail-us__info">
+                  <div class="mail-us__info-header">
+                    <h2 class="mail-us__title">напишите нам</h2>
+                    <p class="mail-us__descr">
+                      Заполните контактную форму, отправьте и мы Вам ответим
+                    </p>
+                  </div>
+                  <ul class="mail-us__contacts-list">
+                    <li class="mail-us__contacts-item">
+                      <h4 class="mail-us__contacts-item-title">
+                        Адрес
+                      </h4>
+                      <span class="mail-us__contacts-item-content">
+                        весь мир
+                      </span>
+                    </li>
+                    <li class="mail-us__contacts-item">
+                      <h4 class="mail-us__contacts-item-title">
+                        Телефон
+                      </h4>
+                      <a href="tel:000000000000" class="mail-us__contacts-item-content">
+                        +000-00-000-00-00
+                      </a>
+                    </li>
+                    <li class="mail-us__contacts-item">
+                      <h4 class="mail-us__contacts-item-title">
+                        Поддержка
+                      </h4>
+                      <a href="mailto:mail@company.com" class="mail-us__contacts-item-content">
+                        support@company.com
+                      </a>
+                      <a href="mailto:mail@company.com" class="mail-us__contacts-item-content">
+                        help@company.com
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mail-us__form-wrap">
+                  <form action="#" class="mail-us__form contact-form">
+                    <div class="contacr-form__inner">
+                      <h4 class="contact-form__title">
+                      Контактная форма
+                      </h4>
+                      <p class="contact-form__descr">
+                        Ваш электронный адрес не будет опубликован. Обязательные поля помечены *
+                      </p>
+                      <div class="contact-form__input-block">
+                        <div class="row contact-form__input-list">
+                          <div class="col-md-6">
+                            <input type="text" placeholder="Имя *" name="person-name" class="contact-form__input-field contact-form__input-field--name">
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" placeholder="Электронная почта *" name="person-email" class="contact-form__input-field contact-form__input-field--email">
+                          </div>
+                          <div class="col-12">
+                            <textarea placeholder="Ваше сообщение *" class="contact-form__input-field contact-form__input-field--message" name="person-message"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="contact-form__submit-btn" type="submit">отправить сообщение</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d341963.855595419!2d37.36341010414685!3d55.73346775970578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8!5e0!3m2!1sru!2sby!4v1622124000466!5m2!1sru!2sby" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </main>
+{% include "templates/footer/_footer.html" %}
+</div>
+{% include "templates/modals/_order_form.html" %}
+{% include "templates/modals/_mobile_nav.html" %}
+{% include "templates/modals/_modals_forms.html" %}
+{% include "templates/base/_add_scripts.html" %}
+</body>
+</html>

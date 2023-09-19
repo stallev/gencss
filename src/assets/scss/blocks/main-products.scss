@@ -1,0 +1,131 @@
+.main-products{
+  margin-bottom: 30px;
+  &__list{
+  }
+  &__item{
+    margin-bottom: 20px;
+  }
+  &__item-content{
+    position: relative;
+    display: block;
+  }
+  
+  &__item-info{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 9vw;
+    color: $white;
+    transform: translateY(-100%);
+    z-index: 3;
+    box-shadow: inset 50vw 50vh 50vw 50vh rgba(0, 0, 0, 0.25);
+  }
+  &__item-img-wrap{
+    min-height: 20vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__item-img{
+    width: 100%;
+    object-fit: cover;
+  }
+  &__item-title{
+    font-size: 7vw;
+    line-height: 1.2;
+  }
+  &__item-description{
+    font-size: 3.5vw;
+    line-height: 1.2;
+  }
+}
+@media only screen and (min-width: 480px){
+  .main-products{
+    &__list{
+      display: flex;
+      justify-content: space-between;
+    }
+    &__item{
+      margin-bottom: 0;
+      width: 49%;
+    }
+    &__item-info{
+      padding: 0 15px;
+    }
+    &__item-title{
+      font-size: 22px;
+      line-height: 1.2;
+    }
+    &__item-description{
+      font-size: 12px;
+      line-height: 1.2;
+    }
+  }
+}
+@media only screen and (min-width: 575px){
+  .main-products{
+    &__item-info{
+      padding-left: 30px;
+    }
+    &__item-title{
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    &__item-description{
+      font-size: 13px;
+      line-height: 1.2;
+    }
+  }
+}
+@media only screen and (min-width: 767px){
+  .main-products{
+    &__item-info{
+      padding: 0 30px ;
+    }
+    &__item-title{
+      font-size: 34px;
+    }
+    &__item-description{
+      font-size: 17px;
+    }
+  }
+}
+@media only screen and (min-width: 991px){
+  .main-products{
+    &__list{
+      display: flex;
+      height: 100%;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    &__item{
+      margin-bottom: 0;
+      width: 100%;
+      &:first-of-type{
+        margin-bottom: 20px;
+      }
+    }
+    &__item-img-wrap{
+      height: 140px;
+      min-height: 0;
+    }
+    &__item-title{
+      font-size: 26px;
+    }
+    &__item-description{
+      font-size: 13px;
+    }
+  }
+}
+@media only screen and (min-width: 1199px){
+  .main-products{
+    &__item{
+    }
+    &__item-img-wrap{
+      height: 165px;
+    }
+  }
+}

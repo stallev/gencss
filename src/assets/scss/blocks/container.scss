@@ -1,0 +1,48 @@
+.container{
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1430px;
+}
+
+.container--upper-top{
+  padding-top: 10px;
+  // padding-bottom: 10px;
+  // border-bottom: 1px solid $delColor;
+}
+.container--mail-us{
+  padding-bottom: 30px;
+}
+
+.container--account{
+  padding-bottom: 30px;
+  min-height: 200px;
+}
+
+.container--notice{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.container--woocommerce-info,
+.container--message-padding {
+  padding-left: 50px;
+}
+
+@media only screen and (min-width: 767px){
+  div.container{
+    max-width: 1430px;
+  }
+}
+@media only screen and (min-width: 991px){
+  .container{
+    max-width: 1430px;
+  }
+}
+@media only screen and (min-width: 1199px){
+  .container{
+    max-width: 1430px;
+  }
+}

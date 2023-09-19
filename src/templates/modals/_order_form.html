@@ -1,0 +1,55 @@
+<div class="order-form__wrap">
+  <div class="order-form__overlay"></div>
+  <div class="container container--order-form">
+    <div class="order-form__content order-form__content--order">
+      <div class="order-form__icon-close-wrap">
+        <span class="order-form__icon-close"></span>
+      </div>
+      <form action="" class="order-form__form">
+        <h3 class="order-form__title">
+          Форма заказа товара
+        </h3>
+        <div class="order-form__field-wrap">
+          <input type="text" name="person" required class="order-form__field" placeholder="Ваше имя">
+        </div>
+        <div class="order-form__field-wrap">
+          <input type="text" name="email" required class="order-form__field" placeholder="Ваш email">
+        </div>
+        <div class="order-form__field-wrap order-form__field-wrap--count">
+              <span class="order-form__field-name">
+                Количество:
+              </span>
+          <div class="count-box">
+            <div class="count-box__input-group">
+              <button class="count-box__minus"></button>
+              <input name="count" type="number" class="count-box__value" min="1" max="1000000" value="1">
+              <button class="count-box__plus"></button>
+            </div>
+          </div>
+        </div>
+        <div class="order-form__hidden">
+          <input type="text" class="order-form__number">
+          <input type="text" class="order-form__name">
+        </div>
+        <input type="submit" value="отправить" class="order-form__submit">
+      </form>
+    </div>
+    <div class="order-form__content order-form__content--call">
+      <div class="order-form__icon-close-wrap call-form__icon-close-wrap">
+        <span class="order-form__icon-close"></span>
+      </div>
+      <form action="" class="order-form__form">
+        <h3 class="order-form__title">
+          Заказ консультации
+        </h3>
+        <div class="order-form__field-wrap">
+          <input type="text" name="person" required class="order-form__field" placeholder="Ваше имя">
+        </div>
+        <div class="order-form__field-wrap">
+          <input type="phone" name="email" required class="order-form__field" placeholder="Ваш телефон">
+        </div>
+        <input type="submit" value="отправить" class="order-form__submit">
+      </form>
+    </div>
+  </div>
+</div>

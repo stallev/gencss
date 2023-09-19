@@ -1,0 +1,17 @@
+.btn {
+  &--small-submit {
+    @include checkoutBtn();
+  }
+
+  &--md-submit {
+    display: block;
+    width: fit-content;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    background-color: #222;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

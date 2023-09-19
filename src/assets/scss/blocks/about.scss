@@ -1,0 +1,61 @@
+.about{
+  &__item{
+    &-img{
+      display: block;
+      width: 100%;
+    }
+    &--img{
+      margin-bottom: 30px;
+    }
+    &-header-question{
+      color: $content-color;
+      font-size: 1.1rem;
+      line-height: 1.86;
+      text-transform: uppercase;
+    }
+    &-header-title{
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #222;
+    }
+    &-header-descr{
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 2.6rem;
+    }
+    &-header-ordinary-info{
+      margin-bottom: 40px;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 2.6rem;
+    }
+    &-counts-block{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    &-counts-value{
+      display: block;
+      text-align: center;
+      font-size: 4rem;
+      font-weight: 700;
+      color: #1560b2;
+    }
+    &-counts-title{
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.4;
+      color: #1560b2;
+    }
+  }
+}
+@media only screen and (min-width: 767px){
+  .about__content .row{
+    flex-direction: row-reverse;
+  }
+  .about__item--info{
+    padding-top: 25px;
+  }
+}

@@ -1,0 +1,85 @@
+.policy__title {
+
+}
+
+.policy__content {
+  margin-top: 30px;
+  padding-bottom: 30px;
+
+  ol {
+    /* убираем стандартную нумерацию */
+    list-style: none;
+    /* Идентифицируем счетчик и даем ему имя li. Значение счетчика не указано - по умолчанию оно равно 0 */
+    counter-reset: li;
+  }
+
+  li:before {
+      /* Определяем элемент, который будет нумероваться — li. Псевдоэлемент before указывает, что содержимое, вставляемое при помощи свойства content, будет располагаться перед пунктами списка. Здесь же устанавливается значение приращения счетчика (по умолчанию равно 1). */
+      counter-increment: li;
+      /* С помощью свойства content выводится номер пункта списка. counters() означает, что генерируемый текст представляет собой значения всех счетчиков с таким именем. Точка в кавычках добавляет разделяющую точку между цифрами, а точка с пробелом добавляется перед содержимым каждого пункта списка */
+      content: counters(li, ".") ". ";
+      font-size: initial;
+  }
+}
+
+.policy__intro {
+  @include paragraphStyle();
+}
+
+.policy__item {
+  margin-top: 15px;
+  color: $content-color;
+}
+
+.policy__item-subtitle {
+  display: inline-block;
+  @include ruleItemH3Style();
+}
+
+.policy__item-subitem {
+  margin-top: 10px;
+  @include paragraphStyle();
+
+  ol {
+    padding-left: 20px;
+  }
+}
+.policy__item-text{
+  margin-bottom: 5px;
+  padding-left: 15px;
+  line-height: 1.85;
+  font-family: $content-ff;
+  font-size: 1.4rem;
+  text-align: justify;
+}
+.policy__item ul li{
+  line-height: 1.85;
+  font-family: $content-ff;
+  font-size: 1.7rem;
+  text-align: justify;
+  list-style: none;
+}
+.policy__item ul {
+  padding-left: 40px;
+}
+
+h4.policy__item-title{
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 1.6rem;
+  color: #222;
+}
+@media only screen and (min-width: 767px) {
+  .page-title--policy h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .policy__item-text{
+    margin-bottom: 5px;
+    padding-left: 15px;
+    line-height: 1.85;
+    font-family: $content-ff;
+    font-size: 1.7rem;
+    text-align: justify;
+  }
+}

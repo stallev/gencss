@@ -1,0 +1,57 @@
+.adv-online{
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  box-shadow: inset 50vw 50vh 50vw 50vh rgba(0,0,0,.3);
+  &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__top{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  &__discount-value{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 25px;
+    background-color: #26b;
+    color: #fff;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+  }
+  &__middle{
+    padding: 15px 0 0;
+    text-align: center;
+    font-size: 4.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &__bottom{
+    padding: 0 0 15px;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+  &__action-link{
+    display: block;
+    width: fit-content;
+    padding: 10px 30px;
+    border: 2px solid #fff;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out;
+    &:hover{
+      background-color: #222;
+      border-color: #fff;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+//навигация вверху страницы оформления заказа
+.steps-nav-wrap{
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.steps-nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  &__item{
+    position: relative;
+    display: inline-block;
+    margin-right: 45px;
+    padding: 5px 0;
+    &::after{
+      position: absolute;
+      display: block;
+      content: '\f105';
+      right: -18px;
+      top: 55%;
+      transform: translate(0, -100%);
+      width: 10px;
+      height: 10px;
+      color: rgb(114, 114, 114);
+      font-size: 1.7rem;
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 400;
+      cursor: pointer;
+    }
+    &:last-of-type::after{
+      display: none;
+    }
+  }
+  &__link{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.9;
+    @include colorOnHover;
+    &--active{
+      color: #26b;
+    }
+  }
+}
+@media only screen and (min-width: 450px){
+  .steps-nav{
+    &__item{
+      &::after{
+        right: -28px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 767px){
+  .steps-nav-wrap{
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
+  .steps-nav{
+    &__item{
+      &::after{
+        font-size: 1.7rem;
+      }
+    }
+    &__link{
+      font-size: 1.7rem;
+    }
+  }
+}
+@media only screen and (min-width: 991px){
+  .steps-nav-wrap{
+    padding-top: 55px;
+    padding-bottom: 75px;
+  }
+  .steps-nav{
+    &__item{
+      &::after{
+        font-size: 2rem;
+        top: 50%;
+      }
+    }
+    &__link{
+      font-size: 2rem;
+    }
+  }
+}

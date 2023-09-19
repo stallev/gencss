@@ -1,0 +1,63 @@
+.phone-form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 280px;
+  &__description{
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  &__input{
+    display: block;
+    box-sizing: border-box;
+    flex-shrink: 2;
+    width: 100%;
+    padding: 10px 10px;
+    background: #2c2c2c;
+    margin-bottom: 10px;
+    flex-grow: 2;
+    text-align: left;
+    color: rgb(161, 161, 161);
+    font-size: 1.4rem;
+    outline: none;
+  }
+  &__textarea{
+    display: block;
+    flex-shrink: 2;
+    width: 100%;
+    padding: 10px 10px;
+    background: #2c2c2c;
+    margin-bottom: 10px;
+    flex-grow: 2;
+    text-align: left;
+    color: rgb(161, 161, 161);
+    font-size: 1.4rem;
+    outline: none;
+  }
+  &__submit-btn{
+    display: block;
+    padding: 10px 15px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background-color: $red;
+    color: $white;
+    text-transform: uppercase;
+    transition: background-color .4s ease-in-out;
+    &:hover{
+      cursor: pointer;
+      background-color: #999;
+    }
+  }
+}
+@media only screen and (min-width: 350px){
+  .phone-form{
+    &__input{
+      width: 100%;
+    }
+  }
+}
+@media only screen and (min-width: 991px){
+  .phone-form{
+    max-width: 100%;
+  }
+}

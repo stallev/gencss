@@ -1,0 +1,283 @@
+.products-overview{
+  background-color: $white;
+  padding-bottom: 10px;
+}
+.products-list__wrap--catalog{
+  margin-left: 7.5px;
+}
+.products-list__catalog-inner,
+.products-list__inner {
+  display: grid;
+  grid-template-columns: minmax(auto, 80%);
+  justify-content: center;
+  gap: 20px;
+
+  @media only screen and (min-width: 575px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media only screen and (min-width: 767px) {
+    grid-auto-rows: minmax(auto, auto);
+    gap: 30px;
+  }
+
+  @media only screen and (min-width: 991px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media only screen and (min-width: 1199px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  &--archive-product {
+    @media only screen and (min-width: 767px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    @media only screen and (min-width: 1199px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+//стили для поведения NavTab в описании продукта
+
+.products-list {
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    @media only screen and (min-width: 767px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__order-by-select {
+    padding: 5px;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    border: 1px solid $brd-c;
+
+    option {
+      display: block;
+      padding: 8px;
+    }
+  }
+
+  .woocommerce-result-count {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+  }
+
+  &__parts-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  &__part-nav-item{
+    width: fit-content;
+  }
+  &__part-nav-link{
+    display: inline-block;
+    margin: 0 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #222;
+    text-transform: uppercase;
+    &--active{
+      color: $red;
+      text-decoration: underline;
+    }
+  }
+}
+.products-list__part-nav-link.accordeon__item-nav-link--active{
+  color: $red;
+  text-decoration: underline;
+}
+
+//конец
+
+//стили для controls в каталоге
+.products-list{
+  &__controls{
+    padding: 20px 0;
+  }
+  &__controls-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  &__controls-items-list{
+    display: flex;
+    & label{
+      margin-right: 10px;
+    }
+  }
+  &__controls-filters{
+    display: inline-block;
+    width: fit-content;
+    padding: 15px 20px;
+    border: 2px solid #222;
+    transition: all .4s ease-in-out;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover{
+      background-color: #26b;
+      color: #fff;
+    }
+  }
+
+  &__controls label{
+    display: none;
+  }
+  &__controls-select{
+    padding: 9px 9px 9px 1px;
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+    color: inherit;
+    font-size: 1.2rem;
+    font-family: inherit;
+    letter-spacing: inherit;
+    z-index: 1;
+    cursor: pointer;
+    & .option{
+      padding: 5px 0;
+    }
+  }
+  &__controls-select--sort{
+    min-width: 130px;
+    z-index: 4;
+  }
+  &__controls-right-item{
+    display: none;
+  }
+  &__controls-to-grid::before{
+    top: -10px;
+    background-image: url(../img/decor/bkg_grid-inactive.png);
+  }
+  &__controls-to-column::before{
+    top: -10px;
+    background-image: url(../img/decor/to-grid-inactive.png);
+    background-size: 95%;
+  }
+}
+.nice-select .list{
+  width: 100%;
+}
+.products-list--catalog .product-card{
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 350px){
+  .products-list__controls-select{
+    font-size: 1.4rem;
+    & .option, .current{
+      padding: 10px;
+    }
+  }
+  .products-list__controls-select--sort{
+    min-width: 170px;
+    z-index: 4;
+  }
+}
+
+
+@media only screen and (min-width: 575px) {
+  .products-list{
+    &__controls{
+      padding: 20px 15px;
+      display: flex;
+      & label{
+        display: inline-block;
+      font-weight: 700;
+      text-transform: uppercase;
+        font-size: 1.3rem;
+      }
+    }
+    &__controls-show{
+      display: block;
+    }
+    &__controls-list{
+      display: flex;
+      justify-content: space-between;
+      margin-left: auto;
+    }
+    &__controls-items-list{
+      justify-content: space-between;
+      margin-left: 10px;
+    }
+    &__controls-left-item{
+      display: flex;
+      align-items: center;
+      margin-right: 0;
+    }
+    
+    &__controls-change-grid{
+      display: none;
+    }
+  }
+}
+@media only screen and (min-width: 767px){
+  .products-list{
+    &__controls-items-list{
+      flex-grow: 2;
+    }
+    &__controls-select--count{
+      min-width: 50px;
+      z-index: 4;
+    }
+    &__controls-left-item{
+      margin-right: 25px;
+    }
+    &__controls-change-grid{
+      display: inline-block;
+      padding: 0 10px;
+      & span{
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        width: 1px;
+        height: 1px;
+        margin-right: 25px;
+        &::before{
+          position: absolute;
+          display: block;
+          content: '';
+          background-repeat: no-repeat;
+          width: 25px;
+          height: 18px;
+        }
+      }
+    }
+    &__controls-right-item{
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+@media only screen and (min-width: 991px){
+
+  .products-list {
+    &__wrap--catalog{
+      margin-left: 0;
+    }
+
+    &__controls {
+      display: none;
+    }
+
+    &__controls-list{
+      justify-content: flex-end;
+    }
+  }
+}
+//конец стилей для controls в каталоге

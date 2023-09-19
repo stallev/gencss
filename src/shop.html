@@ -1,0 +1,32 @@
+{% include "templates/base/_page_head.html" %}
+{% include "templates/header/_header.html" %}
+      <main class="main">
+        <div class="main__content">
+          <div class="breadcrumbs">
+            <div class="container">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a href="index.html" class="breadcrumbs__link">
+                    <i class="fas fa-home"></i>
+                  </a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a href="shop-clothes.html" class="breadcrumbs__link">
+                    Кровати
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="container">
+            {% include "templates/areas/_catalog_area.html" %}
+          </div>
+        </div>
+      </main>
+{% include "templates/footer/_footer.html" %}
+</div>
+{% include "templates/modals/_order_form.html" %}
+{% include "templates/modals/_mobile_nav.html" %}
+{% include "templates/base/_add_scripts.html" %}
+</body>
+</html>

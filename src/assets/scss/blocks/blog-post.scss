@@ -1,0 +1,357 @@
+//посты на странице блога в списке
+.blog-posts-list-content{
+  padding: 25px;
+  background-color: $white;
+}
+.blog-post{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $brd-c;
+  &--single{
+    border-bottom: none;
+  }
+  &__inner-link{
+    display: block;
+    margin-bottom: 20px;
+  }
+  &__img-wrap{
+    display: block;
+    margin: 0;
+    overflow: hidden;
+  }
+  &__img{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+  }
+  &__meta{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 6px;
+    color: $content-color;
+    font-size: 1.4rem;
+    & a, & span{
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    & a{
+      color: $red;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__meta-author{
+    margin-right: 10px;
+  }
+  &__title{
+    display: block;
+    margin-bottom: 10px;
+    @include colorOnHover;
+    color: $content-color;
+    line-height: 1.5;
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+  &__categories{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $brd-c;
+    color: $content-color;
+    font-size: 1.3rem;
+    & a, & span{
+      display: inline-block;
+      padding: 0 2px;
+      @include colorOnHover;
+      cursor: pointer;
+    }
+  }
+  &__excerpt{
+    line-height: 1.85;
+    font-size: 1.4rem;
+    color: $content-color;
+    text-align: justify;
+  }
+  &__readmore{
+    position: relative;
+    display: inline-block;
+    margin-top: 25px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: $red;
+    text-transform: uppercase;
+    text-align: center;
+    transition: color .3s,border-color .3s,background-color .3s,box-shadow .3s;
+    white-space: nowrap;
+    cursor: pointer;
+    &::before{
+      display: block;
+      position: absolute;
+      bottom: -6px;
+      left: 0; 
+      width: 0;
+      height: 2px; 
+      background-color: $red; 
+      content: "";
+      transition: width 0.4s ease-out;
+      @include absoluteXCenter;
+    }
+    &::after{
+      position: absolute;
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .4s ease-in-out;
+      content: '\f178';
+      right: -20px;
+      font-size: 2.5rem;
+      color: $red;
+      @include absoluteYCenter;
+      font-size: 1.4rem;
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+  &__paragraph{
+    margin-bottom: 25px;
+    line-height: 1.85;
+    font-size: 1.4rem;
+    color: #664;
+    & a{
+      text-decoration: underline;
+      @include colorOnHover;
+    }
+  }
+  & figure{
+    margin: 0;
+  }
+  &__with-img{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  &__body{
+    padding-top: 5px;
+  }
+  &__body-img{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  &__paragraph--checked{
+    position: relative;
+    padding-left: 25px;
+    &::before{
+      position: absolute;
+      display: block;
+      content: '\f00c';
+      top: 2px;
+      left: 5px;
+      width: 30px;
+      height: 30px;
+      color: #222;
+      font-size: 1.5rem;
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 400;
+    }
+  }
+  &__body h4{
+    margin-bottom: 17px;
+    font-size: 2.4rem;
+  }
+  &__blockquote{
+    position: relative;
+    margin: 15px 0 40px;
+    padding: 4rem 3rem 4rem 11.7rem;
+    border-left: 2px solid #26b;
+    background-color: #f2f3f5;
+    &::before{
+      content: "\f10e";
+      display: inline-block;
+      position: absolute;
+      left: 3.8rem;
+      top: 50%;
+      font-weight: 900;
+      font-size: 3rem;
+      line-height: 0;
+      font-family: "Font Awesome 5 Pro";
+      color: #999;
+    }
+    & p{
+      font-size: 1.8rem;
+      line-height: 1.67;
+      color: #222;
+    }
+  }
+  &__footer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  &__tags{
+    margin-bottom: 25px;
+  }
+  &__tag-item{
+    display: inline-block;
+    margin: .5rem .2rem .5rem 0;
+    padding: 3px 5px;
+    font-size: 1.3rem;
+    letter-spacing: .01em;
+    border-color: #ebebeb;
+    background: #f2f3f5;
+    color: #999;
+    line-height: 2.8rem;
+    transition: all .4s ease-in-out;
+    &:hover{
+      color: #fff;
+      background-color: #26b;
+    }
+  }
+  &__share-text{
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #664;
+  }
+  &__social-wrap{
+    display: inline-block;
+  }
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+  &__nav-link{
+    display: block;
+    width: 48%;
+    font-size: 1.4rem;
+    color: #222;
+    line-height: 1.7;
+    @include colorOnHover;
+  }
+  &__nav-link-name{
+    font-weight: 700;
+  }
+}
+.blog-post__readmore:hover::after{
+  opacity: 1;
+  visibility: visible;
+}
+.blog-post__readmore:hover::before{
+  width: 100%;
+}
+
+//слайдер "Похожие статьи"
+.blog-posts-similar{
+  &-posts{
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgb(153, 153, 153)
+  }
+  &-title{
+    margin-bottom: 2.6rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.01em;
+    color: #222;
+  }
+}
+
+.blog-post--slide{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+  & .blog-post__img-wrap,
+  & .blog-post__details{
+    width: 100%;
+  }
+  & .blog-post__date-value{
+    border-left: none;
+  }
+  & .blog-post__title{
+    font-size: 1.6rem;
+  }
+}
+.blog-posts-similar-slider{
+  &__slick-dots{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 0;
+    transform: translate(-50%,0);
+    left: 50%;
+    margin-right: -50%;
+    bottom: -40px;
+    & button{
+      display: block;
+      margin: 0 6px;
+      font-size: 0;
+      min-width: none;
+      width: 12px;
+      height: 12px;
+      background-color: #fff;
+      border: 1px solid lightgrey;
+      border-radius: 50%;
+      transition: background-color .2s ease-in-out;
+      &:hover{
+        background-color: lightgray;
+      }
+    }
+  }
+}
+.blog-posts-similar-slider__slick-dots .slick-active button{
+  background-color: grey;
+  width: 14px;
+  height: 14px;
+  &:hover{
+    background-color: #26b;
+  }
+}
+@media only screen and (min-width: 575px){
+  //расстояние между слайдами
+  .blog-posts-similar-slider {
+    & .slick-slide {
+      margin-left: 20px;
+    }
+    & .slick-list {
+      margin-left: -20px;
+    }
+  }
+}
+@media only screen and (min-width: 767px){
+  .blog-post{
+    flex-direction: row;
+    &__img-wrap{
+      width: 40%;
+    }
+    &__details{
+      width: 60%;
+      padding-left: 3%;
+    }
+    &__body-img{
+      width: auto;
+      max-width: 100%;
+      margin-right: 20px;
+    }
+    &__with-img{
+      flex-direction: row;
+      & figure{
+        flex-shrink: 0;
+      }
+    }
+    &__footer{
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__tags{
+      margin-bottom: 0;
+    }
+  }
+}

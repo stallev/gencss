@@ -1,0 +1,425 @@
+{% include "templates/base/_page_head.html" %}
+{% include "templates/header/_header.html" %}
+      <main class="main">
+        <div class="container">
+          <div class="steps-nav-wrap">
+            <nav class="steps-nav">
+              <ul class="steps-nav__list">
+                <li class="steps-nav__item">
+                  <a href="cart.html" class="steps-nav__link steps-nav__link--active">1.Список товаров</a>
+                </li>
+                <li class="steps-nav__item">
+                  <a href="checkout.html" class="steps-nav__link">2.Оформление заказа</a>
+                </li>
+                <li class="steps-nav__item">
+                  <a href="order.html" class="steps-nav__link">3.Подтверждение заказа</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 shop-list">
+              <div class="shop-list__titles">
+                <div>
+                  <h5 class="shop-list__titles-item">Товар</h5>
+                  <h5 class="shop-list__titles-item">Цена</h5>
+                  <h5 class="shop-list__titles-item">Количество</h5>
+                  <h5 class="shop-list__titles-item">Итого</h5>
+                </div>
+              </div>
+              <div class="shop-list__tbody">
+                <div class="shop-list__item">
+                  <div class="shop-list__item-descr">
+                    <figure>
+                      <img src="../img/content/products/product33.jpg" alt="item" class="shop-list__item-image">
+                      <button class="shop-list__item-drop"></button>
+                    </figure>
+                    <a href="product.html" class="shop-list__item-name">
+                      Всесезонная шина Goodyear Vector 4Seasons
+                    </a>
+                  </div>
+                  <div class="shop-list__item-price">
+                    <p class="shop-list__price">
+                      <span class="shop-list__price-value">6000</span>
+                      <span class="shop-list__currency">
+                        р
+                      </span>
+                    </p>
+                  </div>
+                  <div class="shop-list__item-counter">
+                    <div class="count-box">
+                      <div class="count-box__input-group">
+                        <button class="count-box__minus"></button>
+                        <input type="number" class="count-box__value" min="1" max="1000000" value="1">
+                        <button class="count-box__plus"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shop-list__item-total">
+                    <p class="count-box__total">
+                      <span class="count-box__price-sum-value">6000</span>
+                      <span class="count-box__currency">
+                        р
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="shop-list__item">
+                  <div class="shop-list__item-descr">
+                    <figure>
+                      <img src="../img/content/products/product33.jpg" alt="item" class="shop-list__item-image">
+                      <button class="shop-list__item-drop"></button>
+                    </figure>
+                    <a href="product.html" class="shop-list__item-name">
+                      Зимняя шина Nokian Nordman RS2 185/65R15 92R
+                    </a>
+                  </div>
+                  <div class="shop-list__item-price">
+                    <p class="shop-list__price">
+                      <span class="shop-list__price-value">5580</span>
+                      <span class="shop-list__currency">
+                        р
+                      </span>
+                    </p>
+                  </div>
+                  <div class="shop-list__item-counter">
+                    <div class="count-box">
+                      <div class="count-box__input-group">
+                        <button class="count-box__minus"></button>
+                        <input type="number" class="count-box__value" min="1" max="1000000" value="1">
+                        <button class="count-box__plus"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shop-list__item-total">
+                    <p class="count-box__total">
+                      <span class="count-box__price-sum-value">5580</span>
+                      <span class="count-box__currency">
+                        р
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="shop-list__promocode">
+                <form action="cart.html" class="shop-list__promocode-form">
+                  <input type="text" class="checkout__input-text-field shop-list__promocode-value" name="promocode" placeholder="Промокод">
+                  <button class="checkout__btn-sec">
+                    <span>применить</span>
+                  </button>
+                </form>
+                <button class="checkout__btn-sec checkout__btn-sec--refresh">
+                  <i class="far fa-sync-alt"></i>
+                  <span>обновить</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-4 checkout__goods-total">
+              <div class="checkout__item checkout__item--pt0">
+                <h2 class="checkout__goods-total-title">
+                  Всего заказано
+                </h2>
+              </div>
+              <div class="checkout__item checkout__item--subtotal">
+                <h3 class="checkout__item-subtitle">
+                  Итого
+                </h3>
+                <span class="checkout__item-subtotal-value">11580р</span>
+              </div>
+              <div class="checkout__item checkout__item--goods-shipping">
+                <h3 class="checkout__item-subtitle">
+                  Доставка
+                </h3>
+                <ul class="checkout__item-shipping-list">
+                  <li>
+                    <input type="radio" checked id="free-shipping"
+                    name="contact" value="free">
+                    <label for="free-shipping" class="checkout__item-radio-label">Бесплатная доставка</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="ordinary-shipping"
+                    name="contact" value="ordinary">
+                    <label for="ordinary-shipping" class="checkout__item-radio-label">Обычная</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="express-shipping"
+                    name="contact" value="express">
+                    <label for="express-shipping" class="checkout__item-radio-label">Экспресс</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="checkout__item checkout__item-country-shipping">
+                <span class="checkout__item-country">Доставка</span>
+                <select name="country" class="checkout__item-select">
+                  <option class="checkout__item-country-option" data-code="KR" value="South Korea">South Korea</option>
+                  <option class="checkout__item-country-option" data-code="US" value="United States">United States</option>
+                  <option class="checkout__item-country-option" data-code="DK" value="Denmark">Denmark</option>
+                  <option class="checkout__item-country-option" disabled="disabled" value="---">---</option>
+                  <option class="checkout__item-country-option" data-code="AF" value="Afghanistan">Afghanistan</option>
+                  <option class="checkout__item-country-option" data-code="AX" value="Aland Islands">Åland Islands</option>
+                  <option class="checkout__item-country-option" data-code="AL" value="Albania">Albania</option>
+                  <option class="checkout__item-country-option" data-code="DZ" value="Algeria">Algeria</option>
+                  <option class="checkout__item-country-option" data-code="AD" value="Andorra">Andorra</option>
+                  <option class="checkout__item-country-option" data-code="AO" value="Angola">Angola</option>
+                  <option class="checkout__item-country-option" data-code="AI" value="Anguilla">Anguilla</option>
+                  <option class="checkout__item-country-option" data-code="AG" value="Antigua And Barbuda">Antigua &amp; Barbuda</option>
+                  <option class="checkout__item-country-option" data-code="AR" value="Argentina">Argentina</option>
+                  <option class="checkout__item-country-option" data-code="AM" value="Armenia">Armenia</option>
+                  <option class="checkout__item-country-option" data-code="AW" value="Aruba">Aruba</option>
+                  <option class="checkout__item-country-option" value="Ascension Island">Ascension Island</option>
+                  <option class="checkout__item-country-option" data-code="AU" value="Australia">Australia</option>
+                  <option class="checkout__item-country-option" data-code="AT" value="Austria">Austria</option>
+                  <option class="checkout__item-country-option" data-code="AZ" value="Azerbaijan">Azerbaijan</option>
+                  <option class="checkout__item-country-option" data-code="BS" value="Bahamas">Bahamas</option>
+                  <option class="checkout__item-country-option" data-code="BH" value="Bahrain">Bahrain</option>
+                  <option class="checkout__item-country-option" data-code="BD" value="Bangladesh">Bangladesh</option>
+                  <option class="checkout__item-country-option" data-code="BB" value="Barbados">Barbados</option>
+                  <option class="checkout__item-country-option" data-code="BY" selected="selected" value="Belarus">Belarus</option>
+                  <option class="checkout__item-country-option" data-code="BE" value="Belgium">Belgium</option>
+                  <option class="checkout__item-country-option" data-code="BZ" value="Belize">Belize</option>
+                  <option class="checkout__item-country-option" data-code="BJ" value="Benin">Benin</option>
+                  <option class="checkout__item-country-option" data-code="BM" value="Bermuda">Bermuda</option>
+                  <option class="checkout__item-country-option" data-code="BT" value="Bhutan">Bhutan</option>
+                  <option class="checkout__item-country-option" data-code="BO" value="Bolivia">Bolivia</option>
+                  <option class="checkout__item-country-option" data-code="BA" value="Bosnia And Herzegovina">Bosnia &amp; Herzegovina</option>
+                  <option class="checkout__item-country-option" data-code="BW" value="Botswana">Botswana</option>
+                  <option class="checkout__item-country-option" data-code="BV" value="Bouvet Island">Bouvet Island</option>
+                  <option class="checkout__item-country-option" data-code="BR" value="Brazil">Brazil</option>
+                  <option class="checkout__item-country-option" data-code="IO" value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                  <option class="checkout__item-country-option" data-code="VG" value="Virgin Islands, British">British Virgin Islands</option>
+                  <option class="checkout__item-country-option" data-code="BN" value="Brunei">Brunei</option>
+                  <option class="checkout__item-country-option" data-code="BG" value="Bulgaria">Bulgaria</option>
+                  <option class="checkout__item-country-option" data-code="BF" value="Burkina Faso">Burkina Faso</option>
+                  <option class="checkout__item-country-option" data-code="BI" value="Burundi">Burundi</option>
+                  <option class="checkout__item-country-option" data-code="KH" value="Cambodia">Cambodia</option>
+                  <option class="checkout__item-country-option" data-code="CM" value="Republic of Cameroon">Cameroon</option>
+                  <option class="checkout__item-country-option" data-code="CA" value="Canada">Canada</option>
+                  <option class="checkout__item-country-option" data-code="CV" value="Cape Verde">Cape Verde</option>
+                  <option class="checkout__item-country-option" data-code="BQ" value="Caribbean Netherlands">Caribbean Netherlands</option>
+                  <option class="checkout__item-country-option" data-code="KY" value="Cayman Islands">Cayman Islands</option>
+                  <option class="checkout__item-country-option" data-code="CF" value="Central African Republic">Central African Republic</option>
+                  <option class="checkout__item-country-option" data-code="TD" value="Chad">Chad</option>
+                  <option class="checkout__item-country-option" data-code="CL" value="Chile">Chile</option>
+                  <option class="checkout__item-country-option" data-code="CN" value="China">China</option>
+                  <option class="checkout__item-country-option" data-code="CX" value="Christmas Island">Christmas Island</option>
+                  <option class="checkout__item-country-option" data-code="CC" value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                  <option class="checkout__item-country-option" data-code="CO" value="Colombia">Colombia</option>
+                  <option class="checkout__item-country-option" data-code="KM" value="Comoros">Comoros</option>
+                  <option class="checkout__item-country-option" data-code="CG" value="Congo">Congo - Brazzaville</option>
+                  <option class="checkout__item-country-option" data-code="CD" value="Congo, The Democratic Republic Of The">Congo - Kinshasa</option>
+                  <option class="checkout__item-country-option" data-code="CK" value="Cook Islands">Cook Islands</option>
+                  <option class="checkout__item-country-option" data-code="CR" value="Costa Rica">Costa Rica</option>
+                  <option class="checkout__item-country-option" data-code="HR" value="Croatia">Croatia</option>
+                  <option class="checkout__item-country-option" data-code="CW" value="Curaçao">Curaçao</option>
+                  <option class="checkout__item-country-option" data-code="CY" value="Cyprus">Cyprus</option>
+                  <option class="checkout__item-country-option" data-code="CZ" value="Czech Republic">Czechia</option>
+                  <option class="checkout__item-country-option" data-code="CI" value="Côte d'Ivoire">Côte d’Ivoire</option>
+                  <option class="checkout__item-country-option" data-code="DK" value="Denmark">Denmark</option>
+                  <option class="checkout__item-country-option" data-code="DJ" value="Djibouti">Djibouti</option>
+                  <option class="checkout__item-country-option" data-code="DM" value="Dominica">Dominica</option>
+                  <option class="checkout__item-country-option" data-code="DO" value="Dominican Republic">Dominican Republic</option>
+                  <option class="checkout__item-country-option" data-code="EC" value="Ecuador">Ecuador</option>
+                  <option class="checkout__item-country-option" data-code="EG" value="Egypt">Egypt</option>
+                  <option class="checkout__item-country-option" data-code="SV" value="El Salvador">El Salvador</option>
+                  <option class="checkout__item-country-option" data-code="GQ" value="Equatorial Guinea">Equatorial Guinea</option>
+                  <option class="checkout__item-country-option" data-code="ER" value="Eritrea">Eritrea</option>
+                  <option class="checkout__item-country-option" data-code="EE" value="Estonia">Estonia</option>
+                  <option class="checkout__item-country-option" data-code="SZ" value="Eswatini">Eswatini</option>
+                  <option class="checkout__item-country-option" data-code="ET" value="Ethiopia">Ethiopia</option>
+                  <option class="checkout__item-country-option" data-code="FK" value="Falkland Islands (Malvinas)">Falkland Islands</option>
+                  <option class="checkout__item-country-option" data-code="FO" value="Faroe Islands">Faroe Islands</option>
+                  <option class="checkout__item-country-option" data-code="FJ" value="Fiji">Fiji</option>
+                  <option class="checkout__item-country-option" data-code="FI" value="Finland">Finland</option>
+                  <option class="checkout__item-country-option" data-code="FR" value="France">France</option>
+                  <option class="checkout__item-country-option" data-code="GF" value="French Guiana">French Guiana</option>
+                  <option class="checkout__item-country-option" data-code="PF" value="French Polynesia">French Polynesia</option>
+                  <option class="checkout__item-country-option" data-code="TF" value="French Southern Territories">French Southern Territories</option>
+                  <option class="checkout__item-country-option" data-code="GA" value="Gabon">Gabon</option>
+                  <option class="checkout__item-country-option" data-code="GM" value="Gambia">Gambia</option>
+                  <option class="checkout__item-country-option" data-code="GE" value="Georgia">Georgia</option>
+                  <option class="checkout__item-country-option" data-code="DE" value="Germany">Germany</option>
+                  <option class="checkout__item-country-option" data-code="GH" value="Ghana">Ghana</option>
+                  <option class="checkout__item-country-option" data-code="GI" value="Gibraltar">Gibraltar</option>
+                  <option class="checkout__item-country-option" data-code="GR" value="Greece">Greece</option>
+                  <option class="checkout__item-country-option" data-code="GL" value="Greenland">Greenland</option>
+                  <option class="checkout__item-country-option" data-code="GD" value="Grenada">Grenada</option>
+                  <option class="checkout__item-country-option" data-code="GP" value="Guadeloupe">Guadeloupe</option>
+                  <option class="checkout__item-country-option" data-code="GT" value="Guatemala">Guatemala</option>
+                  <option class="checkout__item-country-option" data-code="GG" value="Guernsey">Guernsey</option>
+                  <option class="checkout__item-country-option" data-code="GN" value="Guinea">Guinea</option>
+                  <option class="checkout__item-country-option" data-code="GW" value="Guinea Bissau">Guinea-Bissau</option>
+                  <option class="checkout__item-country-option" data-code="GY" value="Guyana">Guyana</option>
+                  <option class="checkout__item-country-option" data-code="HT" value="Haiti">Haiti</option>
+                  <option class="checkout__item-country-option" data-code="HM" value="Heard Island And Mcdonald Islands">Heard &amp; McDonald Islands</option>
+                  <option class="checkout__item-country-option" data-code="HN" value="Honduras">Honduras</option>
+                  <option class="checkout__item-country-option" data-code="HK" value="Hong Kong">Hong Kong SAR</option>
+                  <option class="checkout__item-country-option" data-code="HU" value="Hungary">Hungary</option>
+                  <option class="checkout__item-country-option" data-code="IS" value="Iceland">Iceland</option>
+                  <option class="checkout__item-country-option" data-code="IN" value="India">India</option>
+                  <option class="checkout__item-country-option" data-code="ID" value="Indonesia">Indonesia</option>
+                  <option class="checkout__item-country-option" data-code="IQ" value="Iraq">Iraq</option>
+                  <option class="checkout__item-country-option" data-code="IE" value="Ireland">Ireland</option>
+                  <option class="checkout__item-country-option" data-code="IM" value="Isle Of Man">Isle of Man</option>
+                  <option class="checkout__item-country-option" data-code="IL" value="Israel">Israel</option>
+                  <option class="checkout__item-country-option" data-code="IT" value="Italy">Italy</option>
+                  <option class="checkout__item-country-option" data-code="JM" value="Jamaica">Jamaica</option>
+                  <option class="checkout__item-country-option" data-code="JP" value="Japan">Japan</option>
+                  <option class="checkout__item-country-option" data-code="JE" value="Jersey">Jersey</option>
+                  <option class="checkout__item-country-option" data-code="JO" value="Jordan">Jordan</option>
+                  <option class="checkout__item-country-option" data-code="KZ" value="Kazakhstan">Kazakhstan</option>
+                  <option class="checkout__item-country-option" data-code="KE" value="Kenya">Kenya</option>
+                  <option class="checkout__item-country-option" data-code="KI" value="Kiribati">Kiribati</option>
+                  <option class="checkout__item-country-option" data-code="XK" value="Kosovo">Kosovo</option>
+                  <option class="checkout__item-country-option" data-code="KW" value="Kuwait">Kuwait</option>
+                  <option class="checkout__item-country-option" data-code="KG" value="Kyrgyzstan">Kyrgyzstan</option>
+                  <option class="checkout__item-country-option" data-code="LA" value="Lao People's Democratic Republic">Laos</option>
+                  <option class="checkout__item-country-option" data-code="LV" value="Latvia">Latvia</option>
+                  <option class="checkout__item-country-option" data-code="LB" value="Lebanon">Lebanon</option>
+                  <option class="checkout__item-country-option" data-code="LS" value="Lesotho">Lesotho</option>
+                  <option class="checkout__item-country-option" data-code="LR" value="Liberia">Liberia</option>
+                  <option class="checkout__item-country-option" data-code="LY" value="Libyan Arab Jamahiriya">Libya</option>
+                  <option class="checkout__item-country-option" data-code="LI" value="Liechtenstein">Liechtenstein</option>
+                  <option class="checkout__item-country-option" data-code="LT" value="Lithuania">Lithuania</option>
+                  <option class="checkout__item-country-option" data-code="LU" value="Luxembourg">Luxembourg</option>
+                  <option class="checkout__item-country-option" data-code="MO" value="Macao">Macao SAR</option>
+                  <option class="checkout__item-country-option" data-code="MG" value="Madagascar">Madagascar</option>
+                  <option class="checkout__item-country-option" data-code="MW" value="Malawi">Malawi</option>
+                  <option class="checkout__item-country-option" data-code="MY" value="Malaysia">Malaysia</option>
+                  <option class="checkout__item-country-option" data-code="MV" value="Maldives">Maldives</option>
+                  <option class="checkout__item-country-option" data-code="ML" value="Mali">Mali</option>
+                  <option class="checkout__item-country-option" data-code="MT" value="Malta">Malta</option>
+                  <option class="checkout__item-country-option" data-code="MQ" value="Martinique">Martinique</option>
+                  <option class="checkout__item-country-option" data-code="MR" value="Mauritania">Mauritania</option>
+                  <option class="checkout__item-country-option" data-code="MU" value="Mauritius">Mauritius</option>
+                  <option class="checkout__item-country-option" data-code="YT" value="Mayotte">Mayotte</option>
+                  <option class="checkout__item-country-option" data-code="MX" value="Mexico">Mexico</option>
+                  <option class="checkout__item-country-option" data-code="MD" value="Moldova, Republic of">Moldova</option>
+                  <option class="checkout__item-country-option" data-code="MC" value="Monaco">Monaco</option>
+                  <option class="checkout__item-country-option" data-code="MN" value="Mongolia">Mongolia</option>
+                  <option class="checkout__item-country-option" data-code="ME" value="Montenegro">Montenegro</option>
+                  <option class="checkout__item-country-option" data-code="MS" value="Montserrat">Montserrat</option>
+                  <option class="checkout__item-country-option" data-code="MA" value="Morocco">Morocco</option>
+                  <option class="checkout__item-country-option" data-code="MZ" value="Mozambique">Mozambique</option>
+                  <option class="checkout__item-country-option" data-code="MM" value="Myanmar">Myanmar (Burma)</option>
+                  <option class="checkout__item-country-option" data-code="NA" value="Namibia">Namibia</option>
+                  <option class="checkout__item-country-option" data-code="NR" value="Nauru">Nauru</option>
+                  <option class="checkout__item-country-option" data-code="NP" value="Nepal">Nepal</option>
+                  <option class="checkout__item-country-option" data-code="NL" value="Netherlands">Netherlands</option>
+                  <option class="checkout__item-country-option" data-code="NC" value="New Caledonia">New Caledonia</option>
+                  <option class="checkout__item-country-option" data-code="NZ" value="New Zealand">New Zealand</option>
+                  <option class="checkout__item-country-option" data-code="NI" value="Nicaragua">Nicaragua</option>
+                  <option class="checkout__item-country-option" data-code="NE" value="Niger">Niger</option>
+                  <option class="checkout__item-country-option" data-code="NG" value="Nigeria">Nigeria</option>
+                  <option class="checkout__item-country-option" data-code="NU" value="Niue">Niue</option>
+                  <option class="checkout__item-country-option" data-code="NF" value="Norfolk Island">Norfolk Island</option>
+                  <option class="checkout__item-country-option" data-code="MK" value="North Macedonia">North Macedonia</option>
+                  <option class="checkout__item-country-option" data-code="NO" value="Norway">Norway</option>
+                  <option class="checkout__item-country-option" data-code="OM" value="Oman">Oman</option>
+                  <option class="checkout__item-country-option" data-code="PK" value="Pakistan">Pakistan</option>
+                  <option class="checkout__item-country-option" data-code="PS" value="Palestinian Territory, Occupied">Palestinian Territories</option>
+                  <option class="checkout__item-country-option" data-code="PA" value="Panama">Panama</option>
+                  <option class="checkout__item-country-option" data-code="PG" value="Papua New Guinea">Papua New Guinea</option>
+                  <option class="checkout__item-country-option" data-code="PY" value="Paraguay">Paraguay</option>
+                  <option class="checkout__item-country-option" data-code="PE" value="Peru">Peru</option>
+                  <option class="checkout__item-country-option" data-code="PH" value="Philippines">Philippines</option>
+                  <option class="checkout__item-country-option" data-code="PN" value="Pitcairn">Pitcairn Islands</option>
+                  <option class="checkout__item-country-option" data-code="PL" value="Poland">Poland</option>
+                  <option class="checkout__item-country-option" data-code="PT" value="Portugal">Portugal</option>
+                  <option class="checkout__item-country-option" data-code="QA" value="Qatar">Qatar</option>
+                  <option class="checkout__item-country-option" data-code="RE" value="Reunion">Réunion</option>
+                  <option class="checkout__item-country-option" data-code="RO" value="Romania">Romania</option>
+                  <option class="checkout__item-country-option" data-code="RU" value="Russia">Russia</option>
+                  <option class="checkout__item-country-option" data-code="RW" value="Rwanda">Rwanda</option>
+                  <option class="checkout__item-country-option" data-code="WS" value="Samoa">Samoa</option>
+                  <option class="checkout__item-country-option" data-code="SM" value="San Marino">San Marino</option>
+                  <option class="checkout__item-country-option" data-code="ST" value="Sao Tome And Principe">São Tomé &amp; Príncipe</option>
+                  <option class="checkout__item-country-option" data-code="SA" value="Saudi Arabia">Saudi Arabia</option>
+                  <option class="checkout__item-country-option" data-code="SN" value="Senegal">Senegal</option>
+                  <option class="checkout__item-country-option" data-code="RS" value="Serbia">Serbia</option>
+                  <option class="checkout__item-country-option" data-code="SC" value="Seychelles">Seychelles</option>
+                  <option class="checkout__item-country-option" data-code="SL" value="Sierra Leone">Sierra Leone</option>
+                  <option class="checkout__item-country-option" data-code="SG" value="Singapore">Singapore</option>
+                  <option class="checkout__item-country-option" data-code="SX" value="Sint Maarten">Sint Maarten</option>
+                  <option class="checkout__item-country-option" data-code="SK" value="Slovakia">Slovakia</option>
+                  <option class="checkout__item-country-option" data-code="SI" value="Slovenia">Slovenia</option>
+                  <option class="checkout__item-country-option" data-code="SB" value="Solomon Islands">Solomon Islands</option>
+                  <option class="checkout__item-country-option" data-code="SO" value="Somalia">Somalia</option>
+                  <option class="checkout__item-country-option" data-code="ZA" value="South Africa">South Africa</option>
+                  <option class="checkout__item-country-option" data-code="GS" value="South Georgia And The South Sandwich Islands">South Georgia &amp; South Sandwich Islands</option>
+                  <option class="checkout__item-country-option" data-code="KR" value="South Korea">South Korea</option>
+                  <option class="checkout__item-country-option" data-code="SS" value="South Sudan">South Sudan</option>
+                  <option class="checkout__item-country-option" data-code="ES" value="Spain">Spain</option>
+                  <option class="checkout__item-country-option" data-code="LK" value="Sri Lanka">Sri Lanka</option>
+                  <option class="checkout__item-country-option" data-code="BL" value="Saint Barthélemy">St. Barthélemy</option>
+                  <option class="checkout__item-country-option" data-code="SH" value="Saint Helena">St. Helena</option>
+                  <option class="checkout__item-country-option" data-code="KN" value="Saint Kitts And Nevis">St. Kitts &amp; Nevis</option>
+                  <option class="checkout__item-country-option" data-code="LC" value="Saint Lucia">St. Lucia</option>
+                  <option class="checkout__item-country-option" data-code="MF" value="Saint Martin">St. Martin</option>
+                  <option class="checkout__item-country-option" data-code="PM" value="Saint Pierre And Miquelon">St. Pierre &amp; Miquelon</option>
+                  <option class="checkout__item-country-option" data-code="VC" value="St. Vincent">St. Vincent &amp; Grenadines</option>
+                  <option class="checkout__item-country-option" data-code="SD" value="Sudan">Sudan</option>
+                  <option class="checkout__item-country-option" data-code="SR" value="Suriname">Suriname</option>
+                  <option class="checkout__item-country-option" data-code="SJ" value="Svalbard And Jan Mayen">Svalbard &amp; Jan Mayen</option>
+                  <option class="checkout__item-country-option" data-code="SE" value="Sweden">Sweden</option>
+                  <option class="checkout__item-country-option" data-code="CH" value="Switzerland">Switzerland</option>
+                  <option class="checkout__item-country-option" data-code="TW" value="Taiwan">Taiwan</option>
+                  <option class="checkout__item-country-option" data-code="TJ" value="Tajikistan">Tajikistan</option>
+                  <option class="checkout__item-country-option" data-code="TZ" value="Tanzania, United Republic Of">Tanzania</option>
+                  <option class="checkout__item-country-option" data-code="TH" value="Thailand">Thailand</option>
+                  <option class="checkout__item-country-option" data-code="TL" value="Timor Leste">Timor-Leste</option>
+                  <option class="checkout__item-country-option" data-code="TG" value="Togo">Togo</option>
+                  <option class="checkout__item-country-option" data-code="TK" value="Tokelau">Tokelau</option>
+                  <option class="checkout__item-country-option" data-code="TO" value="Tonga">Tonga</option>
+                  <option class="checkout__item-country-option" data-code="TT" value="Trinidad and Tobago">Trinidad &amp; Tobago</option>
+                  <option class="checkout__item-country-option" value="Tristan da Cunha">Tristan da Cunha</option>
+                  <option class="checkout__item-country-option" data-code="TN" value="Tunisia">Tunisia</option>
+                  <option class="checkout__item-country-option" data-code="TR" value="Turkey">Turkey</option>
+                  <option class="checkout__item-country-option" data-code="TM" value="Turkmenistan">Turkmenistan</option>
+                  <option class="checkout__item-country-option" data-code="TC" value="Turks and Caicos Islands">Turks &amp; Caicos Islands</option>
+                  <option class="checkout__item-country-option" data-code="TV" value="Tuvalu">Tuvalu</option>
+                  <option class="checkout__item-country-option" data-code="UM" value="United States Minor Outlying Islands">U.S. Outlying Islands</option>
+                  <option class="checkout__item-country-option" data-code="UG" value="Uganda">Uganda</option>
+                  <option class="checkout__item-country-option" data-code="UA" value="Ukraine">Ukraine</option>
+                  <option class="checkout__item-country-option" data-code="AE" value="United Arab Emirates">United Arab Emirates</option>
+                  <option class="checkout__item-country-option" data-code="GB" value="United Kingdom">United Kingdom</option>
+                  <option class="checkout__item-country-option" data-code="US" value="United States">United States</option>
+                  <option class="checkout__item-country-option" data-code="UY" value="Uruguay">Uruguay</option>
+                  <option class="checkout__item-country-option" data-code="UZ" value="Uzbekistan">Uzbekistan</option>
+                  <option class="checkout__item-country-option" data-code="VU" value="Vanuatu">Vanuatu</option>
+                  <option class="checkout__item-country-option" data-code="VA" value="Holy See (Vatican City State)">Vatican City</option>
+                  <option class="checkout__item-country-option" data-code="VE" value="Venezuela">Venezuela</option>
+                  <option class="checkout__item-country-option" data-code="VN" value="Vietnam">Vietnam</option>
+                  <option class="checkout__item-country-option" data-code="WF" value="Wallis And Futuna">Wallis &amp; Futuna</option>
+                  <option class="checkout__item-country-option" data-code="EH" value="Western Sahara">Western Sahara</option>
+                  <option class="checkout__item-country-option" data-code="YE" value="Yemen">Yemen</option>
+                  <option class="checkout__item-country-option" data-code="ZM" value="Zambia">Zambia</option>
+                  <option class="checkout__item-country-option" data-code="ZW" value="Zimbabwe">Zimbabwe</option></select>
+                  <button class="checkout__btn-sec checkout__btn-sec--refresh">
+                    <i class="far fa-sync-alt"></i>
+                    <span>обновить</span>
+                  </button>
+              </div>
+              <div class="checkout__item checkout__item--submit">
+                <div>
+                  <h3 class="checkout__item-subtitle">
+                    Итого
+                  </h3>
+                  <span class="checkout__item-value">11580</span>
+                </div>
+                <a href="checkout.html" class="checkout__item-submit-btn">
+                  оформить заказ
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+{% include "templates/footer/_footer.html" %}
+</div>
+{% include "templates/modals/_order_form.html" %}
+{% include "templates/modals/_mobile_nav.html" %}
+{% include "templates/base/_add_scripts.html" %}
+</body>
+</html>

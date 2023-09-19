@@ -1,0 +1,207 @@
+{% include "templates/base/_page_head.html" %}
+{% include "templates/header/_header.html" %}
+      <main class="main">
+        <div class="container">
+          <div class="steps-nav-wrap">
+            <nav class="steps-nav">
+              <ul class="steps-nav__list">
+                <li class="steps-nav__item">
+                  <a href="cart.html" class="steps-nav__link">1.Список товаров</a>
+                </li>
+                <li class="steps-nav__item">
+                  <a href="checkout.html" class="steps-nav__link steps-nav__link--active">2.Оформление заказа</a>
+                </li>
+                <li class="steps-nav__item">
+                  <a href="order.html" class="steps-nav__link">3.Подтверждение заказа</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="container container-fluid--checkout">
+          <div class="row">
+            <div class="col-lg-7 checkout__contacts-info">
+              <div class="checkout__item checkout__item--contacts-info">
+                <h2>контактные данные</h2>
+                <div class="row">
+                  <div class="col-sm-6 checkout__item-field">
+                    <label for="person-name" class="checkout__input-text-label">Имя *</label>
+                    <input type="text" class="checkout__input-text-field" name="person-name" id="person-name" required>
+                  </div>
+                  <div class="col-sm-6 checkout__item-field">
+                    <label for="person-surname" class="checkout__input-text-label">Фамилия *</label>
+                    <input type="text" class="checkout__input-text-field" name="person-surname" id="person-surname" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 checkout__item-field">
+                    <label for="person-town" class="checkout__input-text-label">Город / село *</label>
+                    <input type="text" class="checkout__input-text-field" name="person-town" id="person-town" required>
+                  </div>
+                  <div class="col-sm-6 checkout__item-field">
+                    <label for="person-district" class="checkout__input-text-label">Район *</label>
+                    <input type="text" class="checkout__input-text-field" name="person-district" id="person-district" required>
+                  </div>
+                </div>
+                <div class="checkout__item-field">
+                  <label for="person-company" class="checkout__input-text-label">Название организации(необязательно)</label>
+                  <input type="text" class="checkout__input-text-field" name="person-company" id="person-company">
+                </div>
+                <div class="checkout__item-field">
+                  <label for="person-street" class="checkout__input-text-label">Улица *</label>
+                  <input type="text" class="checkout__input-text-field" name="person-street" id="person-street" required>
+                </div>
+                <div class="checkout__item-field">
+                  <label for="person-home" class="checkout__input-text-label">Номер дома и квартиры *</label>
+                  <input type="text" class="checkout__input-text-field" name="person-home" id="person-home" required>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 checkout__item-field">
+                    <label for="person-zip" class="checkout__input-text-label">Индекс *</label>
+                    <input type="text" class="checkout__input-text-field" name="person-zip" id="person-zip" required>
+                  </div>
+                  <div class="col-sm-6 checkout__item-field">
+                    <label for="person-phone" class="checkout__input-text-label">Телефон *</label>
+                    <input type="tel" class="checkout__input-text-field" name="person-phone" id="person-phone" required>
+                  </div>
+                </div>
+                <div class="checkout__item-field">
+                  <label for="person-mail" class="checkout__input-text-label">Email *</label>
+                  <input type="email" class="checkout__input-text-field" name="person-mail" id="person-mail" required>
+                </div>
+              </div>
+              <div class="checkout__item checkout__item-additional-info">
+                <div class="checkout__item-check-fields-wrap">
+                  <div class="checkout__item-chk-field">
+                    <input type="checkbox" id="register"
+                    name="register" value="free">
+                    <label for="register" class="checkout__item-checkbox-label">Зарегистрироваться?</label>
+                  </div>
+                  <div class="checkout__item-chk-field">
+                    <input type="checkbox" id="other-address"
+                    name="register" value="free">
+                    <label for="other-address" class="checkout__item-checkbox-label">Отправить по другому адресу?</label>
+                  </div>
+                </div>
+                <h2>
+                  дополнительная информация
+                </h2>
+                <div class="checkout__item-textarea">
+                  <span class="checkout__item-textarea-descr">
+                    Комментарий (необязательно)
+                  </span>
+                  <textarea class="checkout__item-textarea-field" name="additional-info" id="additional-info" cols="30" rows="6" placeholder="Комментарий к Вашему заказу"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="checkout__item checkout__item--pt0">
+                <h2 class="checkout__goods-total-title">
+                  Ваш заказ
+                </h2>
+              </div>
+              <div class="checkout__order-info">
+                <div class="checkout__item checkout__item--goods">
+                  <h3 class="checkout__item-goods-total-title">Товар</h3>
+                  <div class="checkout__item-goods-row">
+                    <p>
+                      <span class="checkout__item-goods-name">
+                        Всесезонная шина Goodyear Vector 4Seasons
+                      </span>
+                      <i class="fas fa-times"></i>
+                      <span class="checkout__item-goods-count">1</span>
+                    </p>
+                    <span class="checkout__item-goods-price">6000 р</span>
+                  </div>
+                  <div class="checkout__item-goods-row">
+                    <p>
+                      <span class="checkout__item-goods-name">
+                        Зимняя шина Nokian Nordman RS2 185/65R15 92R
+                      </span>
+                      <i class="fas fa-times"></i>
+                      <span class="checkout__item-goods-count">1</span>
+                    </p>
+                    <span class="checkout__item-goods-price">5580 р</span>
+                  </div>
+                </div>
+                <div class="checkout__item checkout__item--subtotal">
+                  <h3 class="checkout__item-subtitle">
+                    Итого
+                  </h3>
+                  <span class="checkout__item-subtotal-value">11580р</span>
+                </div>
+                <div class="checkout__item checkout__item--goods-shipping">
+                  <h3 class="checkout__item-subtitle">
+                    Доставка
+                  </h3>
+                  <ul class="checkout__item-shipping-list">
+                    <li>
+                      <input type="radio" checked id="free-shipping"
+                      name="contact" value="free">
+                      <label for="free-shipping" class="checkout__item-radio-label">Бесплатная доставка</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="ordinary-shipping"
+                      name="contact" value="ordinary">
+                      <label for="ordinary-shipping" class="checkout__item-radio-label">Обычная</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="express-shipping"
+                      name="contact" value="express">
+                      <label for="express-shipping" class="checkout__item-radio-label">Экспресс</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="checkout__item">
+                  <div class="checkout__item-inner-total-wrap">
+                    <h3>
+                      Итого
+                    </h3>
+                    <span>11580р</span>
+                  </div>
+                </div>
+                <div class="checkout__item checkout__item--payment-methods">
+                  <h3>
+                    Методы оплаты
+                  </h3>
+                  <ul class="accordeon checkout__item-payments-list">
+                    <li class="accordeon__item checkout__item-payments-item">
+                      <a href="checkout.html" class="checkout__item-payments-link checkout__item-payments-link--active accordeon__item-nav-link accordeon__item-nav-link--active" data-tab-id="checkout__item-payments-bank">Банковский перевод</a>
+                      <p class="accordeon__item-content accordeon__item-content--active checkout__item-payments-content checkout__item-payments-content--active" id="checkout__item-payments-bank">
+                        Сделайте платеж прямо на наш банковский счет. Используйте свой идентификатор заказа в качестве ссылки для оплаты. Ваш заказ не будет отправлен до тех пор, пока средства не будут зачислены на наш счет.
+                      </p>
+                    </li>
+                    <li class="accordeon__item checkout__item-payments-item">
+                      <a href="checkout.html" class="checkout__item-payments-link accordeon__item-nav-link" data-tab-id="checkout__item-payments-card">Платежная карта</a>
+                      <p class="accordeon__item-content checkout__item-payments-content" id="checkout__item-payments-card">
+                        Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. На берегу несколько рыбного диких безопасную подпоясал инициал всемогущая рекламных.
+                      </p>
+                    </li>
+                    <li class="accordeon__item checkout__item-payments-item">
+                      <a href="checkout.html" class="checkout__item-payments-link accordeon__item-nav-link" data-tab-id="checkout__item-payments-paypal">Наложенным платежом</a>
+                      <p class="accordeon__item-content checkout__item-payments-content" id="checkout__item-payments-paypal">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi corrupti sed enim eum nemo vitae veritatis saepe quas impedit, voluptas, officia libero? Animi quo incidunt ex vero quia accusantium totam.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="checkout__item checkout__item--submit">
+                  <p>
+                    Ваши личные данные будут использоваться для обработки вашего заказа, поддержки вашего опыта на этом веб-сайте и для других целей, описанных в нашей политике конфиденциальности.
+                  </p>
+                  <a href="order.html" class="checkout__item-submit-btn">
+                    оформить заказ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+{% include "templates/footer/_footer.html" %}
+</div>
+{% include "templates/modals/_order_form.html" %}
+{% include "templates/modals/_mobile_nav.html" %}
+{% include "templates/base/_add_scripts.html" %}
+</body>
+</html>

@@ -1,0 +1,200 @@
+.woocommerce {
+  p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  a {
+    text-decoration: underline;
+    @include textColorOnHover();
+  }
+}
+
+.woocommerce-MyAccount-navigation {
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    li {
+      display: inline-block;
+      padding: 5px 10px;
+
+      .is-active {
+        color: $red;
+      }
+    }
+
+    a {
+      @include paragraphPageContentStyle();
+      text-decoration: none;
+    }
+  }
+
+  @media only screen and (min-width: 767px) {
+    ul {
+      padding-top: 15px;
+      flex-direction: row;
+    }
+  }
+}
+
+.woocommerce-orders-table {
+  th {
+    @include checkoutThStyle();
+    padding: 5px 0;
+  }
+
+  td {
+    padding: 10px 10px;
+    font-size: 1.4rem;
+  }
+}
+
+.woocommerce-MyAccount-content {
+  .woocommerce-Address {
+    width: 100%;
+
+    h3 {
+      @include ruleItemH3Style();
+    }
+
+    a {
+      @include paragraphStyle();
+    }
+  }
+
+  p, address {
+    @include paragraphStyle();
+    margin-bottom: 20px;
+  }
+}
+
+.addresses {
+  margin-top: 15px;
+
+  .woocommerce-Address {
+    margin-bottom: 20px;
+  }
+
+  header {
+    padding-bottom: 10px;
+
+    a {
+      display: inline-block;
+      padding: 10px 0;
+      font-size: 1.4rem;
+    }
+  }
+
+  address {
+    @include paragraphStyle();
+  }
+}
+
+.woocommerce-MyAccount-content {
+  .woocommerce-Message {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+  }
+}
+
+.woocommerce-EditAccountForm.edit-account {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .my-account {
+    &__passwords {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  legend {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+}
+
+.woocommerce-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  input {
+    @include ordinaryInputField();
+    max-width: 250px;
+  }
+}
+
+.woocommerce-MyAccount-content {
+  section {
+    margin-top: 20px;
+
+    h2, h3 {
+      margin-bottom: 20px;
+    }
+
+    th {
+      @include checkoutThStyle();
+      padding: 10px 0;
+    }
+  
+    td {
+      padding: 10px 0;
+      font-size: 1.4rem;
+    }
+
+    tr th {
+      text-align: left;
+    }
+  }
+
+  h3 {
+    margin-bottom: 20px;
+  }
+}
+
+.woocommerce-address-fields__field-wrapper {
+  margin-bottom: 20px;
+}
+
+div.cart-empty.woocommerce-info {
+  @media only screen and (min-width: 767px) {
+    min-height: 200px;
+  }
+  
+  p {
+    padding-left: 20px;
+  }
+}
+
+.term-description {
+  @include paragraphStyle();
+}
+
+.woocommerce-no-products-found {
+  margin: 30px 0;
+  padding: 30px 20px;
+}
+
+.wc-block-components-sale-badge {
+  display: none;
+}
+
+.woocommerce-products-header {
+  .term-description {
+    margin: 20px 0;
+  }
+}
+.woocommerce-checkout #payment ul.payment_methods,
+.woocommerce-order-overview__payment-method,
+.checkout__thankyou-order-details.woocommerce-order-overview p {
+  // display: none;
+}

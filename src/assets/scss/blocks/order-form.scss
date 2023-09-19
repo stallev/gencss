@@ -1,0 +1,150 @@
+.order-form__wrap{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  height: 100%;
+  visibility: hidden;
+}
+.order-form__overlay{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: #222;
+  opacity: .8;
+}
+.order-form__icon-close-wrap{
+  position: absolute;
+  top: 10px;
+  right: 4px;
+  cursor: pointer;
+}
+.order-form__icon-close{
+  position: relative;
+  display: block;
+  width: 1px;
+  height: 1px;
+  background-color: transparent;
+  &::after, &::before{
+    display: block;
+    position: absolute;
+    content: '';
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 2px;
+    background-color: $red;
+  }
+  &::after{
+    transform: rotate(45deg);
+  }
+  &::before{
+    transform: rotate(-45deg);
+  }
+}
+.order-form__content{
+  position: absolute;
+  background-color: #fff;
+  padding: 3rem 1.5rem;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -100vh);
+  overflow-y: auto;
+  background: #222529;
+  width: 80vw;
+  max-width: 320px;
+  transition: transform .4s ease-in-out;
+}
+.order-form-view .order-form__content,
+.order-form-view-call .order-form__content,
+.order-form-view-consult .order-form__content{
+  background-color: #fff;
+}
+.order-form-view .order-form__wrap,
+.order-form-view-call .order-form__wrap,
+.order-form-view-consult .order-form__wrap{
+  visibility: visible;
+}
+.order-form-view .order-form__content--order,
+.order-form-view-call .order-form__content--call,
+.order-form-view-call .order-form__content--consult{
+  top: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  height: fit-content;
+}
+input{
+  font-family: $content-ff;
+}
+.order-form{
+  &__title{
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  &__field-wrap{
+    margin-bottom: 20px;
+    &--count{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__field{
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    color: $textColor;
+    border: 1px solid $delColor;
+    border-radius: 10px;
+    font-size: 1.8rem;
+  }
+  &__field-name{
+    display: inline-block;
+    font-size: 1.8rem;
+    margin-right: 15px;
+    color: #757575;
+  }
+  &__hidden{
+    // width: 100%;
+    // padding: 15px 20px;
+    // color: $textColor;
+    // border: 1px solid $delColor;
+    // border-radius: 10px;
+    // font-size: 1.8rem;
+    // margin-bottom: 5px;
+    display: none;
+    font-size: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &__submit{
+    display: block;
+    width: 100%;
+    border: 1px solid $delColor;
+    border-radius: 10px;
+    @include submitBtn;
+  }
+}
+.count-product-field-wrap{
+  display: inline-block;
+  border: 1px solid #222;
+}
+.count-product-field{
+  display: inline-block;
+  padding: 10px;
+  font-size: 1.7rem;
+}
+.order-form__form .order-form__submit{
+  padding: 15px 20px;
+}
+@media only screen and (min-width: 767px){
+  //по центру экрана
+  
+}
